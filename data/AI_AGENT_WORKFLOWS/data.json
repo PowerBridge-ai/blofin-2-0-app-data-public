@@ -1,0 +1,805 @@
+[
+  {
+    "id": "wf_orchestrator_main",
+    "name": "Main Orchestration Loop",
+    "description": "The master workflow that formulates a plan and delegates tasks to other agents to achieve a high-level goal.",
+    "icon": "GitBranch",
+    "steps": [
+      {
+        "id": "step_1_ingest",
+        "agentId": "orchestrator-agent",
+        "name": "Ingest Goal & Survey Systems",
+        "description": "Receive the user's high-level goal and build a manifest of all available agents, workflows, and tasks to understand capabilities.",
+        "icon": "GitBranch"
+      },
+      {
+        "id": "step_2_plan",
+        "agentId": "orchestrator-agent",
+        "name": "Formulate Master Plan",
+        "description": "Break the high-level goal into a sequence of logical sub-tasks with clear dependencies.",
+        "icon": "GitBranch"
+      },
+      {
+        "id": "step_3_delegate",
+        "agentId": "orchestrator-agent",
+        "name": "Delegate & Execute Sub-Tasks",
+        "description": "Assign each sub-task to the most appropriate specialized agent and initiate execution.",
+        "icon": "GitBranch"
+      },
+      {
+        "id": "step_4_monitor",
+        "agentId": "monitor-agent",
+        "name": "Monitor Progress & Synthesize",
+        "description": "Monitor task completion, handle errors, and synthesize results to inform the next step in the master plan.",
+        "icon": "ShieldCheck"
+      }
+    ]
+  },
+  {
+    "id": "wf_autonomous_trading_main",
+    "name": "Autonomous Trading",
+    "description": "A fully autonomous workflow that finds a trading opportunity, researches it, and builds a strategy.",
+    "icon": "BrainCircuit",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "initialMessage": {
+          "type": "string",
+          "default": "Find a volatile crypto to trade"
+        }
+      },
+      "required": [
+        "initialMessage"
+      ]
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "strategyId": {
+          "type": "string"
+        },
+        "deploymentId": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        }
+      }
+    },
+    "steps": [
+      {
+        "id": "step_1762667571741",
+        "agentId": "agent_1762421550001",
+        "name": "Formulate Plan",
+        "description": "This step is to do an inventory and index of the active AI agents that are in the platform get a list of all of their work flows Get a list of all the steps that are in each workflow get each step an ID get a list of all the functions and tasks that agents can perform And storages of a temporary file for this session this'll be the AI agent index and the AI agent function index",
+        "icon": "GitBranch",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "goal": {
+              "type": "string",
+              "description": "The high-level goal for the orchestration."
+            }
+          },
+          "required": [
+            "goal"
+          ]
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "agentIndex": {
+              "type": "array",
+              "description": "An indexed list of all available and active AI agents.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "capabilities": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "capabilities"
+                ]
+              }
+            },
+            "functionIndex": {
+              "type": "array",
+              "description": "An indexed list of all available functions, tasks, and workflows.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "workflow",
+                      "task",
+                      "script"
+                    ]
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "inputSchema": {
+                    "type": "object"
+                  },
+                  "outputSchema": {
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "id",
+                  "type",
+                  "description"
+                ]
+              }
+            }
+          },
+          "required": [
+            "agentIndex",
+            "functionIndex"
+          ]
+        }
+      },
+      {
+        "id": "step_1",
+        "agentId": "market-scanner-agent",
+        "name": "Scan For Opportunity",
+        "description": "Scan the market to find a volatile instrument to trade.",
+        "icon": "ScanSearch"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550016",
+        "name": "Analyze Market Condition",
+        "description": "Analyze the identified instrument and determine market condition.",
+        "icon": "ScanSearch"
+      },
+      {
+        "id": "step_1762709291285",
+        "agentId": "agent_1762421550021",
+        "name": "Research Market Sentiment and news",
+        "description": "Leverages the Tavily Research Agent to conduct a comprehensive web search for the specified {instrument}. It scans for recent news articles, financial reports, and social media discussions to analyze and determine the prevailing market sentiment. The agent will categorize findings into 'Positive', 'Negative', and 'Neutral' sentiment, providing a summary and source URLs for each, along with an overall sentiment score.",
+        "icon": "Search",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "instrument": {
+              "type": "string",
+              "description": "The financial instrument to research (e.g., 'TRUTH-USDT')."
+            }
+          },
+          "required": [
+            "instrument"
+          ]
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "instrument": {
+              "type": "string",
+              "description": "The instrument that was researched."
+            },
+            "overallSentiment": {
+              "type": "string",
+              "description": "The final summarized sentiment.",
+              "enum": [
+                "Positive",
+                "Negative",
+                "Neutral"
+              ]
+            },
+            "sentimentScore": {
+              "type": "number",
+              "description": "A score from -1 (very negative) to +1 (very positive) representing the overall sentiment."
+            },
+            "categorizedFindings": {
+              "type": "array",
+              "description": "A list of findings categorized by sentiment.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sentiment": {
+                    "type": "string",
+                    "enum": [
+                      "Positive",
+                      "Negative",
+                      "Neutral"
+                    ]
+                  },
+                  "summary": {
+                    "type": "string",
+                    "description": "A summary of the news and discussions for this sentiment category."
+                  },
+                  "sources": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string"
+                        },
+                        "url": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "title",
+                        "url"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "sentiment",
+                  "summary",
+                  "sources"
+                ]
+              }
+            }
+          },
+          "required": [
+            "instrument",
+            "overallSentiment",
+            "sentimentScore",
+            "categorizedFindings"
+          ]
+        }
+      },
+      {
+        "id": "step_3",
+        "agentId": "strategy-agent",
+        "name": "Develop DCA Strategy",
+        "description": "Develop a Dollar-Cost Averaging strategy based on the analysis.",
+        "icon": "BrainCircuit"
+      }
+    ]
+  },
+  {
+    "id": "wf_market_research",
+    "name": "Market Condition Analysis",
+    "description": "Analyzes market data and sentiment to determine the current market condition.",
+    "icon": "LineChart",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550002",
+        "name": "Fetch Market Data",
+        "description": "Fetch historical and real-time price/volume data.",
+        "icon": "LineChart"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550003",
+        "name": "Gather News/Sentiment",
+        "description": "Search the web for relevant news and social sentiment.",
+        "icon": "Search"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550002",
+        "name": "Analyze & Conclude",
+        "description": "Synthesize all data to output a market condition assessment.",
+        "icon": "LineChart"
+      }
+    ]
+  },
+  {
+    "id": "wf_web_research",
+    "name": "News & Sentiment Gathering",
+    "description": "Gathers and summarizes external information from the web on a given topic.",
+    "icon": "Search",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550003",
+        "name": "Formulate Search Queries",
+        "description": "Create effective search queries based on the input topic.",
+        "icon": "Search"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550003",
+        "name": "Execute Web Search",
+        "description": "Use search tools to find relevant articles, news, and posts.",
+        "icon": "Search"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550003",
+        "name": "Summarize & Cite",
+        "description": "Summarize the findings and provide sources for verification.",
+        "icon": "Search"
+      }
+    ]
+  },
+  {
+    "id": "wf_indicator_dev",
+    "name": "Indicator Development",
+    "description": "Researches and generates custom technical indicators.",
+    "icon": "SlidersHorizontal",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550004",
+        "name": "Receive Concept",
+        "description": "Receive a user's idea or a goal for a new indicator.",
+        "icon": "SlidersHorizontal"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550004",
+        "name": "Generate Pine Script",
+        "description": "Write the Pine Script code for the indicator.",
+        "icon": "SlidersHorizontal"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550004",
+        "name": "Suggest Parameters",
+        "description": "Provide a set of suggested initial parameters for the indicator.",
+        "icon": "SlidersHorizontal"
+      }
+    ]
+  },
+  {
+    "id": "wf_strategy_dev",
+    "name": "Strategy Development",
+    "description": "Formulates a complete trading strategy from market analysis.",
+    "icon": "BrainCircuit",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550002",
+        "name": "Get Market Analysis",
+        "description": "Obtain the current market condition.",
+        "icon": "LineChart"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550005",
+        "name": "Formulate Strategy",
+        "description": "Define entry/exit conditions, risk management, and sizing.",
+        "icon": "BrainCircuit"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550013",
+        "name": "Initial Backtest",
+        "description": "Run a preliminary backtest on the newly formulated strategy.",
+        "icon": "TestTube2"
+      }
+    ]
+  },
+  {
+    "id": "wf_trade_execution",
+    "name": "Trade Execution",
+    "description": "Executes and manages a single trade based on precise instructions.",
+    "icon": "Bot",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550006",
+        "name": "Receive Signal",
+        "description": "Receive a precise trade signal (e.g., from a strategy).",
+        "icon": "Bot"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550006",
+        "name": "Place Order",
+        "description": "Use the Blofin API to place the specified order.",
+        "icon": "Bot"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550006",
+        "name": "Monitor & Report",
+        "description": "Monitor order status and report execution results.",
+        "icon": "Bot"
+      }
+    ]
+  },
+  {
+    "id": "wf_bot_lifecycle",
+    "name": "Bot Lifecycle Management",
+    "description": "Manages the full lifecycle of a trading bot, from deployment to shutdown.",
+    "icon": "Tv",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550007",
+        "name": "Deploy Bot",
+        "description": "Start a new instance of a trading bot with a given strategy.",
+        "icon": "Tv"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550007",
+        "name": "Monitor Health",
+        "description": "Periodically check the status and performance of the live bot.",
+        "icon": "Tv"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550007",
+        "name": "Stop Bot",
+        "description": "Gracefully shut down a trading bot and report its final status.",
+        "icon": "Tv"
+      }
+    ]
+  },
+  {
+    "id": "wf_workflow_definition",
+    "name": "Workflow Definition",
+    "description": "A meta-workflow for defining a new sequence of agent tasks.",
+    "icon": "Workflow",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550008",
+        "name": "Get User Goal",
+        "description": "Understand the high-level goal for the new workflow.",
+        "icon": "Workflow"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550008",
+        "name": "Sequence Agents",
+        "description": "Determine the correct sequence of agents to achieve the goal.",
+        "icon": "Workflow"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550008",
+        "name": "Define DAG",
+        "description": "Create the final workflow as a directed acyclic graph (DAG).",
+        "icon": "Workflow"
+      }
+    ]
+  },
+  {
+    "id": "wf_memory_access",
+    "name": "Memory Access",
+    "description": "Handles the storage and retrieval of information from the knowledge base.",
+    "icon": "MemoryStick",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550009",
+        "name": "Receive Query/Data",
+        "description": "Receive a request to either read, write, or search memory.",
+        "icon": "MemoryStick"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550009",
+        "name": "Access Knowledge Base",
+        "description": "Perform the requested CRUD operation on the memory store.",
+        "icon": "MemoryStick"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550009",
+        "name": "Return Result",
+        "description": "Return the result of the operation or a status confirmation.",
+        "icon": "MemoryStick"
+      }
+    ]
+  },
+  {
+    "id": "wf_platform_monitoring",
+    "name": "Platform Monitoring",
+    "description": "Continuously monitors the health and performance of all platform components.",
+    "icon": "ShieldCheck",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550010",
+        "name": "Health Checks",
+        "description": "Run periodic health checks on APIs and agent statuses.",
+        "icon": "ShieldCheck"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550010",
+        "name": "Log Metrics",
+        "description": "Log key performance metrics like latency and error rates.",
+        "icon": "ShieldCheck"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550010",
+        "name": "Alert on Anomaly",
+        "description": "Generate an alert if a metric crosses a predefined threshold.",
+        "icon": "ShieldCheck"
+      }
+    ]
+  },
+  {
+    "id": "wf_generic_optimization",
+    "name": "Generic Optimization",
+    "description": "A general-purpose workflow for optimizing a given target towards a goal.",
+    "icon": "SlidersHorizontal",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550011",
+        "name": "Define Target & Goal",
+        "description": "Receive the target (e.g., strategy ID) and the goal (e.g., 'reduce drawdown').",
+        "icon": "SlidersHorizontal"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550011",
+        "name": "Propose Change",
+        "description": "Propose a parameter change to achieve the goal.",
+        "icon": "SlidersHorizontal"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550011",
+        "name": "Test & Verify",
+        "description": "Test the proposed change and verify if it met the goal.",
+        "icon": "SlidersHorizontal"
+      }
+    ]
+  },
+  {
+    "id": "wf_strategy_optimization",
+    "name": "Strategy Optimization",
+    "description": "Iteratively improves a trading strategy to enhance its performance.",
+    "icon": "SlidersHorizontal",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550012",
+        "name": "Analyze Backtest",
+        "description": "Receive a strategy and its backtest results for analysis.",
+        "icon": "SlidersHorizontal"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550012",
+        "name": "Propose Adjustments",
+        "description": "Suggest changes to indicators, timeframes, or risk parameters.",
+        "icon": "SlidersHorizontal"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550013",
+        "name": "Re-Backtest",
+        "description": "Run a new backtest with the proposed adjustments.",
+        "icon": "TestTube2"
+      }
+    ]
+  },
+  {
+    "id": "wf_backtesting_opt",
+    "name": "Backtesting Engine Tuning",
+    "description": "Fine-tunes the parameters of the backtesting engine for speed and accuracy.",
+    "icon": "SlidersHorizontal",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550013",
+        "name": "Analyze Current Config",
+        "description": "Review the current backtesting engine configuration.",
+        "icon": "SlidersHorizontal"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550013",
+        "name": "Suggest Parameter Change",
+        "description": "Propose a change to parameters like data granularity or slippage models.",
+        "icon": "SlidersHorizontal"
+      }
+    ]
+  },
+  {
+    "id": "wf_performance_opt",
+    "name": "System Performance Tuning",
+    "description": "Monitors and optimizes the overall performance of the trading system.",
+    "icon": "SlidersHorizontal",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550010",
+        "name": "Identify Bottleneck",
+        "description": "Identify a performance bottleneck (e.g., slow API, DB query).",
+        "icon": "ShieldCheck"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550014",
+        "name": "Propose Optimization",
+        "description": "Suggest a specific action to alleviate the bottleneck.",
+        "icon": "SlidersHorizontal"
+      }
+    ]
+  },
+  {
+    "id": "wf_bot_optimization",
+    "name": "Live Bot Optimization",
+    "description": "Adjusts the parameters of a live trading bot to improve its efficiency.",
+    "icon": "SlidersHorizontal",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550017",
+        "name": "Analyze Bot Performance",
+        "description": "Analyze a live bot's execution, slippage, and PnL.",
+        "icon": "Eye"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550015",
+        "name": "Tune Parameters",
+        "description": "Propose real-time adjustments to the bot's parameters.",
+        "icon": "SlidersHorizontal"
+      }
+    ]
+  },
+  {
+    "id": "wf_market_screening",
+    "name": "Market Opportunity Screening",
+    "description": "Continuously scans all markets for potential trading opportunities.",
+    "icon": "ScanSearch",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550016",
+        "name": "Scan Markets",
+        "description": "Run predefined screens (e.g., volume spikes) across all instruments.",
+        "icon": "ScanSearch"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550016",
+        "name": "Flag Opportunity",
+        "description": "If criteria are met, flag the instrument for further analysis.",
+        "icon": "ScanSearch"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550001",
+        "name": "Delegate Analysis",
+        "description": "Delegate the flagged opportunity to the Market Research Agent.",
+        "icon": "GitBranch"
+      }
+    ]
+  },
+  {
+    "id": "wf_position_monitoring",
+    "name": "Position Monitoring",
+    "description": "Monitors all open trading positions for performance and risk.",
+    "icon": "Eye",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550017",
+        "name": "Track PnL",
+        "description": "Continuously track the PnL and key metrics for all open positions.",
+        "icon": "Eye"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550017",
+        "name": "Check for Alerts",
+        "description": "Check if any position is nearing its stop-loss or take-profit.",
+        "icon": "Eye"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550001",
+        "name": "Alert for Review",
+        "description": "If an alert is triggered, notify the user or a management agent.",
+        "icon": "GitBranch"
+      }
+    ]
+  },
+  {
+    "id": "wf_risk_management",
+    "name": "Portfolio Risk Management",
+    "description": "Holistically analyzes and mitigates risk across the entire portfolio.",
+    "icon": "ShieldAlert",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550018",
+        "name": "Calculate Portfolio VaR",
+        "description": "Calculate the current Value at Risk for the entire portfolio.",
+        "icon": "ShieldAlert"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550018",
+        "name": "Analyze Exposure",
+        "description": "Determine the risk exposure for each asset.",
+        "icon": "ShieldAlert"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550018",
+        "name": "Recommend Action",
+        "description": "Suggest a specific action to mitigate identified risks.",
+        "icon": "ShieldAlert"
+      }
+    ]
+  },
+  {
+    "id": "wf_asset_management",
+    "name": "Asset & Portfolio Rebalancing",
+    "description": "Manages the strategic allocation and rebalancing of assets within the portfolio.",
+    "icon": "Landmark",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550019",
+        "name": "Check Allocation",
+        "description": "Compare the current asset allocation to the target allocation.",
+        "icon": "Landmark"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550019",
+        "name": "Generate Rebalancing Actions",
+        "description": "If drifted, generate a list of trades to rebalance the portfolio.",
+        "icon": "Landmark"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550001",
+        "name": "Execute Rebalancing Trades",
+        "description": "Delegate the rebalancing trades to the Trading Agent.",
+        "icon": "GitBranch"
+      }
+    ]
+  },
+  {
+    "id": "wf_portfolio_overview",
+    "name": "Portfolio Overview & Reporting",
+    "description": "Provides a high-level overview of the entire investment portfolio's performance.",
+    "icon": "PieChart",
+    "steps": [
+      {
+        "id": "step_1",
+        "agentId": "agent_1762421550020",
+        "name": "Aggregate Performance",
+        "description": "Calculate total value, overall PnL, and Sharpe ratio.",
+        "icon": "PieChart"
+      },
+      {
+        "id": "step_2",
+        "agentId": "agent_1762421550020",
+        "name": "Check Strategy Alignment",
+        "description": "Score how well the portfolio aligns with its long-term strategy.",
+        "icon": "PieChart"
+      },
+      {
+        "id": "step_3",
+        "agentId": "agent_1762421550020",
+        "name": "Generate Report",
+        "description": "Generate a high-level summary report for the user.",
+        "icon": "PieChart"
+      }
+    ]
+  }
+]
