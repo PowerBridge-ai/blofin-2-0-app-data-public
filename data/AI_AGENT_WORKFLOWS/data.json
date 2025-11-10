@@ -70,8 +70,8 @@
       {
         "id": "step_1762667571741",
         "agentId": "agent_1762421550001",
-        "name": "Formulate Plan",
-        "description": "This step is to do an inventory and index of the active AI agents that are in the platform get a list of all of their work flows Get a list of all the steps that are in each workflow get each step an ID get a list of all the functions and tasks that agents can perform And storages of a temporary file for this session this'll be the AI agent index and the AI agent function index",
+        "name": "📝 Formulate Plan: Ingest Goal & Survey Systems",
+        "description": "Receive the user's high-level goal and build a manifest of all available agents, workflows, and tasks to understand system capabilities.",
         "icon": "GitBranch",
         "inputSchema": {
           "type": "object",
@@ -156,26 +156,487 @@
             "agentIndex",
             "functionIndex"
           ]
-        }
+        },
+        "model": "openrouter/polaris-alpha"
+      },
+      {
+        "id": "step_1762771441715",
+        "agentId": "agent_1762421550001",
+        "name": "🗺️ Create and Assign Detailed Operational Tasking",
+        "description": "Using the system manifest, create a detailed operational plan including SMART goals, a task breakdown with agent assignments, and a comprehensive testing plan to achieve the autonomous trading objective.",
+        "icon": "GitBranch",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "agentIndex": {
+              "type": "array",
+              "items": {}
+            },
+            "functionIndex": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "agentIndex",
+            "functionIndex"
+          ]
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "operationalPlan": {
+              "type": "object",
+              "properties": {
+                "highLevelGoal": {
+                  "type": "string",
+                  "description": "The main, overarching goal of the entire operation."
+                },
+                "keyObjectives": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "A list of primary objectives to achieve the high-level goal."
+                }
+              },
+              "required": [
+                "highLevelGoal",
+                "keyObjectives"
+              ]
+            },
+            "taskBreakdown": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "taskId": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "assignedAgentId": {
+                    "type": "string"
+                  },
+                  "dependencies": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "outputExpectation": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "taskId",
+                  "name",
+                  "description",
+                  "assignedAgentId"
+                ]
+              }
+            }
+          },
+          "required": [
+            "operationalPlan",
+            "taskBreakdown"
+          ]
+        },
+        "model": "tngtech/deepseek-r1t2-chimera:free"
+      },
+      {
+        "id": "step_1762771565117",
+        "agentId": "agent_1762421550009",
+        "name": "✅ Create Detailed Execution Plan and Checklist",
+        "description": "Converts the operational task breakdown into an executable plan with detailed instructions, dependencies, and success criteria. Generates an execution checklist for AI agents with references to operational documentation to be used during the Update Agent Workflows step.",
+        "icon": "MemoryStick",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "operationalPlan": {
+              "type": "object",
+              "properties": {
+                "highLevelGoal": {
+                  "type": "string"
+                },
+                "keyObjectives": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "highLevelGoal",
+                "keyObjectives"
+              ]
+            },
+            "taskBreakdown": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "taskId": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "assignedAgentId": {
+                    "type": "string"
+                  },
+                  "dependencies": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "outputExpectation": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "taskId",
+                  "name",
+                  "description",
+                  "assignedAgentId"
+                ]
+              }
+            }
+          },
+          "required": [
+            "operationalPlan",
+            "taskBreakdown"
+          ]
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "checklist": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "taskId": {
+                    "type": "string",
+                    "description": "Identifier matching taskBreakdown.taskId"
+                  },
+                  "executionDescription": {
+                    "type": "string",
+                    "description": "Concrete step-by-step instructions for execution"
+                  },
+                  "dependencies": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of taskIds that must be completed before this task"
+                  },
+                  "successCriteria": {
+                    "type": "string",
+                    "description": "Measurable criteria for task completion"
+                  },
+                  "status": {
+                    "type": "string",
+                    "enum": [
+                      "pending",
+                      "in_progress",
+                      "completed",
+                      "failed"
+                    ],
+                    "default": "pending"
+                  },
+                  "completionResults": {
+                    "type": "string",
+                    "description": "Output data/metadata after task completion"
+                  },
+                  "assignedAgentId": {
+                    "type": "string",
+                    "description": "Agent responsible for execution"
+                  }
+                },
+                "required": [
+                  "taskId",
+                  "executionDescription",
+                  "successCriteria",
+                  "status",
+                  "assignedAgentId"
+                ]
+              }
+            },
+            "operationalDocumentation": {
+              "type": "object",
+              "properties": {
+                "highLevelGoalReference": {
+                  "type": "string",
+                  "description": "Immutable copy of operationalPlan.highLevelGoal"
+                },
+                "keyObjectivesReference": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Immutable copy of operationalPlan.keyObjectives"
+                }
+              },
+              "required": [
+                "highLevelGoalReference",
+                "keyObjectivesReference"
+              ]
+            }
+          },
+          "required": [
+            "checklist",
+            "operationalDocumentation"
+          ]
+        },
+        "model": "tngtech/deepseek-r1t2-chimera:free"
+      },
+      {
+        "id": "step_1762771674782",
+        "agentId": "agent_1762421550008",
+        "name": "⚡ Workflow Activation & Token-Efficiency Validation",
+        "description": "Reviews agent task list & operational checklist to identify required active workflows. Updates execution logic for token-economy optimization (minimizing unnecessary API calls/redundant steps), verifies all dependencies are operational, and conducts smoke tests to confirm workflow readiness for opportunity scanning.",
+        "icon": "Workflow",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "checklist": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "taskId": {
+                    "type": "string"
+                  },
+                  "executionDescription": {
+                    "type": "string"
+                  },
+                  "dependencies": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "status": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "taskId",
+                  "status"
+                ]
+              }
+            },
+            "operationalDocumentation": {
+              "type": "object",
+              "properties": {
+                "highLevelGoalReference": {
+                  "type": "string"
+                },
+                "keyObjectivesReference": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "highLevelGoalReference",
+                "keyObjectivesReference"
+              ]
+            }
+          },
+          "required": [
+            "checklist",
+            "operationalDocumentation"
+          ]
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "activeWorkflows": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "workflowName": {
+                    "type": "string",
+                    "description": "Name of activated workflow component (e.g. 'Market Data Stream Listener')"
+                  },
+                  "tokenOptimizationApplied": {
+                    "type": "boolean",
+                    "description": "Indicates if workflow was modified for token efficiency"
+                  },
+                  "optimizationSummary": {
+                    "type": "string",
+                    "description": "Brief description of token-saving changes (e.g. 'Redundant price checks eliminated')"
+                  }
+                },
+                "required": [
+                  "workflowName",
+                  "tokenOptimizationApplied"
+                ]
+              }
+            },
+            "testResults": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "workflowComponent": {
+                    "type": "string"
+                  },
+                  "testStatus": {
+                    "type": "string",
+                    "enum": [
+                      "success",
+                      "failure"
+                    ]
+                  },
+                  "validationSummary": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "workflowComponent",
+                  "testStatus"
+                ]
+              }
+            },
+            "workflowReady": {
+              "type": "boolean",
+              "description": "Final verification that all systems are operational for opportunity scanning"
+            }
+          },
+          "required": [
+            "activeWorkflows",
+            "testResults",
+            "workflowReady"
+          ]
+        },
+        "model": "nousresearch/hermes-3-llama-3.1-405b:free"
       },
       {
         "id": "step_1",
-        "agentId": "market-scanner-agent",
-        "name": "Scan For Opportunity",
-        "description": "Scan the market to find a volatile instrument to trade.",
-        "icon": "ScanSearch"
+        "agentId": "agent_1762421550002",
+        "name": "📈 Market Scanner for Volatile Instruments",
+        "description": "Scans predefined market data sources (local rankings + velocity watchlist) to identify high-volatility trading instruments. Uses token-efficient data structures to prioritize instruments with extreme price movements and velocity scores.",
+        "icon": "Bot",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "workflowReady": {
+              "type": "boolean",
+              "description": "Confirmation from previous step that scanning can begin"
+            }
+          },
+          "required": [
+            "workflowReady"
+          ],
+          "additionalProperties": false
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "timestamp": {
+              "type": "string",
+              "format": "date-time",
+              "description": "UTC time when scan was executed"
+            },
+            "dataSourcesUsed": {
+              "type": "array",
+              "maxItems": 3,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "LocalFastRunner",
+                  "RankingsTop10",
+                  "VelocityWatchlist"
+                ]
+              }
+            },
+            "volatileInstruments": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "instrumentId": {
+                    "type": "string",
+                    "description": "Ticker symbol or market identifier"
+                  },
+                  "velocityScore": {
+                    "type": "number",
+                    "description": "Normalized volatility metric (0-100 scale)"
+                  },
+                  "priceChange24h": {
+                    "type": "number",
+                    "description": "Percentage price movement"
+                  },
+                  "source": {
+                    "type": "string",
+                    "enum": [
+                      "GainersTop5",
+                      "LosersTop5",
+                      "VelocityPeak"
+                    ]
+                  }
+                },
+                "required": [
+                  "instrumentId",
+                  "velocityScore"
+                ]
+              }
+            },
+            "scanSummary": {
+              "type": "object",
+              "properties": {
+                "totalInstrumentsScanned": {
+                  "type": "integer"
+                },
+                "highestVelocityScore": {
+                  "type": "number"
+                },
+                "mostVolatileSource": {
+                  "type": "string",
+                  "enum": [
+                    "GainersTop5",
+                    "LosersTop5",
+                    "VelocityPeak"
+                  ]
+                }
+              },
+              "required": [
+                "totalInstrumentsScanned"
+              ]
+            }
+          },
+          "required": [
+            "timestamp",
+            "volatileInstruments"
+          ]
+        },
+        "model": "nvidia/nemotron-nano-12b-v2-vl:free"
       },
       {
         "id": "step_2",
         "agentId": "agent_1762421550016",
-        "name": "Analyze Market Condition",
+        "name": "🔍 Analyze Market Condition",
         "description": "Analyze the identified instrument and determine market condition.",
-        "icon": "ScanSearch"
+        "icon": "ScanSearch",
+        "model": "openrouter/polaris-alpha"
       },
       {
         "id": "step_1762709291285",
         "agentId": "agent_1762421550021",
-        "name": "Research Market Sentiment and news",
+        "name": "📰 Research Market Sentiment and news",
         "description": "Leverages the Tavily Research Agent to conduct a comprehensive web search for the specified {instrument}. It scans for recent news articles, financial reports, and social media discussions to analyze and determine the prevailing market sentiment. The agent will categorize findings into 'Positive', 'Negative', and 'Neutral' sentiment, providing a summary and source URLs for each, along with an overall sentiment score.",
         "icon": "Search",
         "inputSchema": {
@@ -261,14 +722,163 @@
             "sentimentScore",
             "categorizedFindings"
           ]
-        }
+        },
+        "model": "minimax/minimax-m2:free"
       },
       {
         "id": "step_3",
-        "agentId": "strategy-agent",
-        "name": "Develop DCA Strategy",
-        "description": "Develop a Dollar-Cost Averaging strategy based on the analysis.",
-        "icon": "BrainCircuit"
+        "agentId": "agent_1762421550005",
+        "name": "🤖 Develop DCA Strategy",
+        "description": "💡 Token-Economic Task: Based on technical analysis from previous steps (market range, direction, volatility), formulate a complete DCA bot strategy. Evaluate martingale scaling, AI directionality, and generate a final configuration matching the platform's required structure.",
+        "icon": "BrainCircuit",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "instrument": {
+              "type": "string"
+            },
+            "marketCondition": {
+              "type": "string",
+              "enum": [
+                "bullish",
+                "bearish",
+                "neutral",
+                "choppy"
+              ]
+            },
+            "confidenceScore": {
+              "type": "number"
+            },
+            "keyObservations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "instrument",
+            "marketCondition",
+            "keyObservations"
+          ]
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "strategy": {
+              "$ref": "#/definitions/dcaConfig"
+            }
+          },
+          "required": [
+            "strategy"
+          ],
+          "definitions": {
+            "dcaConfig": {
+              "type": "object",
+              "properties": {
+                "strategy": {
+                  "type": "string",
+                  "enum": [
+                    "long",
+                    "short",
+                    "ai"
+                  ]
+                },
+                "baseOrderVolume": {
+                  "type": "number"
+                },
+                "safetyOrderVolume": {
+                  "type": "number"
+                },
+                "takeProfit": {
+                  "type": "number"
+                },
+                "maxSafetyOrders": {
+                  "type": "integer"
+                },
+                "safetyOrderStepPercentage": {
+                  "type": "number"
+                },
+                "takeProfitType": {
+                  "type": "string",
+                  "enum": [
+                    "total",
+                    "base"
+                  ]
+                },
+                "martingaleVolumeCoefficient": {
+                  "type": "number"
+                },
+                "martingaleStepCoefficient": {
+                  "type": "number"
+                },
+                "stopLossPercentage": {
+                  "type": "number"
+                },
+                "stopLossType": {
+                  "type": "string",
+                  "enum": [
+                    "stop_loss",
+                    "stop_limit"
+                  ]
+                },
+                "leverageType": {
+                  "type": "string",
+                  "enum": [
+                    "not_specified",
+                    "custom",
+                    "cross",
+                    "isolated"
+                  ]
+                },
+                "startOrderType": {
+                  "type": "string",
+                  "enum": [
+                    "limit",
+                    "market"
+                  ]
+                },
+                "trailingEnabled": {
+                  "type": "boolean"
+                },
+                "trailingDeviation": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "strategy",
+                "baseOrderVolume",
+                "safetyOrderVolume",
+                "takeProfit",
+                "maxSafetyOrders",
+                "safetyOrderStepPercentage"
+              ]
+            }
+          }
+        },
+        "model": "tngtech/deepseek-r1t2-chimera:free"
+      },
+      {
+        "id": "step_1762771813203",
+        "agentId": "agent_1762421550013",
+        "name": "🧪 Backtest trading strategy",
+        "description": "Take the trading strategy created in the previous step by the strategy agent This should be a DCA bot that you should find in the strategy library using the most recent filter timestamp then you're going to deploy this back test for a set range for multiple time frames so this is an in-depth back test and what you're trying to do is get a baseline without editing or changing any parameters on the indicators or changing any of the threshold parameters for profitability or risk to get a baseline and then systematically adjust the back test with suggestions So the input should be what bot was created the output should be the back testing outcome and the steps that were completed for back testing\n\n\nCreate an input schema and output schema for with step description and make the step description more efficient but as detailed as possible\n\nTake the trading strategy created in the previous step by the strategy agent This should be a DCA bot that you should find in the strategy library using the most recent filter timestamp then you're going to deploy this back test for a set range for multiple time frames so this is an in-depth back test and what you're trying to do is get a baseline without editing or changing any parameters on the indicators or changing any of the threshold parameters for profitability or risk to get a baseline and then systematically adjust the back test with suggestions So the input should be what bot was created the output should be the back testing outcome and the steps that were completed for back testing",
+        "icon": "Bot",
+        "model": "openai/gpt-oss-20b:free"
+      },
+      {
+        "id": "step_1762772003058",
+        "agentId": "agent_1762421550012",
+        "name": "📊 Analyze the backtest results and create a optimization plan",
+        "description": "Analyze the back test results of the strategy and create a optimization plan",
+        "icon": "SlidersHorizontal"
+      },
+      {
+        "id": "step_1762772184457",
+        "agentId": "agent_1762421550015",
+        "name": "⚙️ bot optimization",
+        "description": "Create a series of back testable bot parameters for the current live bot or the the live paper trading bot and then go ahead and have an output for the parameters that could be tested to check for optimization and profitability",
+        "icon": "SlidersHorizontal"
       }
     ]
   },
