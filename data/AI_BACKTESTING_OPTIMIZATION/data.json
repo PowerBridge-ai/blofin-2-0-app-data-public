@@ -1,0 +1,53 @@
+[
+  {
+    "strategyId": "strat_1762453774820",
+    "optimizationId": "opt_1762453800524",
+    "optimizedStrategy": {
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "Base DCA Interval: Bi-weekly (14 days) > Change to Weekly (7 days)",
+        "Trend Confirmation: Daily & Weekly Charts",
+        "Signal Monitoring: 4-hour & 1-day Timeframes"
+      ],
+      "indicators": [
+        "EMA: Use 20/50-EMA crossover on Daily AND 50-EMA > 200-EMA on Weekly (dual timeframe confirmation)",
+        "RSI (14-period): Buy when RSI dips into 30-45 (oversold with recovery) with bullish EMA alignment",
+        "Volume: Require volume spike (>150% of 20-day avg) on breakout/retest signals",
+        "Support/Resistance: Use Fibonacci retracement levels (38.2%-61.8%) for precision buy zones"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 100,
+        "orderAmount": 300,
+        "maxOrders": 6
+      }
+    },
+    "optimizationAttempts": 1,
+    "status": "SUCCESS"
+  },
+  {
+    "strategyId": "strat_1762421055826",
+    "optimizationId": "opt_1762551978274",
+    "optimizedStrategy": {
+      "id": "strat_1762421055826",
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "Daily (for trend confirmation)",
+        "Weekly (DCA execution) - Primary",
+        "Monthly (higher-trend validation)"
+      ],
+      "indicators": [
+        "SMAs: 50-period & 200-period (bullish crossover = trend confirmation)",
+        "RSI (14-period): Identify overbought (>70) or pullbacks (<40)",
+        "MACD (12-26-9): Bullish momentum confirmation",
+        "On-chain metrics (optional): MVRV Z-Score >1.5 to confirm bullish regime"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 1000,
+        "orderAmount": 100,
+        "maxOrders": 20
+      }
+    },
+    "optimizationAttempts": 0,
+    "status": "SUCCESS"
+  }
+]
