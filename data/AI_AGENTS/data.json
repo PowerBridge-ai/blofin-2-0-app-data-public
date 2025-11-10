@@ -1,0 +1,1012 @@
+[
+  {
+    "id": "orchestrator-agent",
+    "agentId": "agent_1762421550001",
+    "name": "Orchestrator Agent",
+    "description": "Manages the overall workflow and coordinates tasks between all other specialized agents.",
+    "status": "active",
+    "icon": "GitBranch",
+    "tools": [
+      "task_assignment",
+      "status_monitoring",
+      "workflow_control"
+    ],
+    "model": "deepseek/deepseek-chat-v3.1:free",
+    "systemPrompt": "You are an orchestrator agent. Your role is to manage the overall workflow and coordinate tasks between other specialized agents based on a master plan. You receive the overall goal, break it down into steps, and delegate each step to the appropriate agent. You monitor the status of each task and ensure the final output is achieved.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "nextAgent": {
+          "type": "string",
+          "description": "The ID of the next agent to delegate the task to."
+        },
+        "task": {
+          "type": "string",
+          "description": "The specific task instruction for the next agent."
+        },
+        "context": {
+          "type": "object",
+          "description": "The data or context the next agent will need."
+        },
+        "isComplete": {
+          "type": "boolean",
+          "description": "Set to true if the entire workflow is complete."
+        }
+      },
+      "required": [
+        "nextAgent",
+        "task",
+        "context",
+        "isComplete"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_orchestrator_main",
+      "label": "Main Orchestration Loop"
+    }
+  },
+  {
+    "id": "market-research-agent",
+    "agentId": "agent_1762421550002",
+    "name": "Market Research Agent",
+    "description": "Performs a deep-dive analysis on a single, specified instrument to determine its overall market condition.",
+    "status": "active",
+    "icon": "LineChart",
+    "tools": [
+      "market_data_api",
+      "trend_analysis",
+      "sentiment_analysis"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are a market research agent. You receive a SINGLE instrument (e.g., BTC-USDT) as input. Your job is to perform a deep-dive analysis on this specific instrument by considering its historical price action, recent news (via web search), and overall market sentiment to determine a final market condition (bullish, bearish, neutral, choppy) and a confidence score.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "instrument": {
+          "type": "string"
+        },
+        "marketCondition": {
+          "type": "string",
+          "enum": [
+            "bullish",
+            "bearish",
+            "neutral",
+            "choppy"
+          ]
+        },
+        "confidenceScore": {
+          "type": "number",
+          "description": "A score from 0 to 1 indicating confidence in the assessment."
+        },
+        "keyObservations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of key observations supporting the assessment."
+        }
+      },
+      "required": [
+        "instrument",
+        "marketCondition",
+        "confidenceScore",
+        "keyObservations"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_market_research",
+      "label": "Market Condition Analysis"
+    }
+  },
+  {
+    "id": "tavily-research-agent",
+    "agentId": "agent_1762421550021",
+    "name": "Tavily Research Agent",
+    "description": "Performs in-depth, categorized web research using the Tavily API to gather, analyze, and synthesize information on any given topic.",
+    "status": "active",
+    "icon": "Search",
+    "tools": [
+      "tavily_search"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are an expert research analyst agent powered by the Tavily API. Your primary function is to conduct in-depth, structured web research on a given query. You must break down the research into logical categories, gather relevant information and sources for each, and present a comprehensive, synthesized report. Your final output must be a structured JSON object containing the categorized findings, a list of all sources used, and an overall summary. Be mindful of API credit usage and formulate your queries efficiently.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "The original research query."
+        },
+        "overallSummary": {
+          "type": "string",
+          "description": "A high-level summary of the entire research report."
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "categoryName": {
+                "type": "string",
+                "description": "The name of the research category (e.g., 'Market Analysis', 'Competitor Landscape', 'Technical Details')."
+              },
+              "summary": {
+                "type": "string",
+                "description": "A detailed summary of the findings within this category."
+              },
+              "sources": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "url"
+                  ]
+                },
+                "description": "A list of sources cited for the information in this category."
+              }
+            },
+            "required": [
+              "categoryName",
+              "summary",
+              "sources"
+            ]
+          }
+        },
+        "sources": {
+          "type": "array",
+          "description": "A consolidated list of all unique sources cited across all categories.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "title",
+              "url"
+            ]
+          }
+        }
+      },
+      "required": [
+        "query",
+        "overallSummary",
+        "categories",
+        "sources"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_tavily_research",
+      "label": "Tavily Web Research"
+    }
+  },
+  {
+    "id": "indicator-agent",
+    "agentId": "agent_1762421550004",
+    "name": "Indicator Agent",
+    "description": "Researches, develops, and manages custom trading indicators for technical analysis.",
+    "status": "active",
+    "icon": "SlidersHorizontal",
+    "tools": [
+      "indicator_backtesting",
+      "indicator_optimization",
+      "pine_script_generator",
+      "Typescript indicator generator",
+      "Javascript Indicator Generator"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are a technical indicator specialist. Your role is to research, develop, and manage custom trading indicators for use within the platform's analysis engine. You can suggest optimal parameters and backtest indicator effectiveness. If specifically requested, you can generate indicator code in Pine Script, TypeScript, or JavaScript.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "indicatorName": {
+          "type": "string"
+        },
+        "pineScript": {
+          "type": "string",
+          "description": "The generated Pine Script code for the indicator. Only generate this if specifically requested."
+        },
+        "suggestedParameters": {
+          "type": "object",
+          "description": "An object containing suggested parameters for the indicator (e.g., { length: 14, source: 'close' })."
+        }
+      },
+      "required": [
+        "indicatorName"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_indicator_dev",
+      "label": "Indicator Development"
+    }
+  },
+  {
+    "id": "strategy-agent",
+    "agentId": "agent_1762421550005",
+    "name": "Strategy Agent",
+    "description": "Develops, backtests, and optimizes new trading strategies based on research.",
+    "status": "active",
+    "icon": "BrainCircuit",
+    "tools": [
+      "strategy_backtester",
+      "parameter_optimization",
+      "risk_assessment"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are a quantitative trading strategy agent. Based on market analysis and research, you will formulate a complete trading strategy, including entry/exit conditions, risk management rules, and position sizing. You will define the strategy in a structured format.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "strategyName": {
+          "type": "string"
+        },
+        "instrument": {
+          "type": "string"
+        },
+        "timeframe": {
+          "type": "string"
+        },
+        "entryConditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exitConditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "stopLoss": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "percentage",
+                "ATR"
+              ]
+            },
+            "value": {
+              "type": "number"
+            }
+          }
+        },
+        "takeProfit": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "percentage",
+                "fixed_price"
+              ]
+            },
+            "value": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "required": [
+        "strategyName",
+        "instrument",
+        "timeframe",
+        "entryConditions",
+        "exitConditions"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_strategy_dev",
+      "label": "Strategy Development"
+    }
+  },
+  {
+    "id": "trading-agent",
+    "agentId": "agent_1762421550006",
+    "name": "Trading Agent",
+    "description": "Executes live or paper trades on the exchange based on signals from validated strategies.",
+    "status": "active",
+    "icon": "Bot",
+    "tools": [
+      "blofin_api_trade",
+      "order_management",
+      "position_tracking"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are a trading execution agent. Your sole responsibility is to execute trades on an exchange (live or paper) based on precise instructions you receive. You must use the provided trading API tools to place, cancel, and monitor orders.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "orderId": {
+          "type": "string",
+          "description": "The ID of the placed order."
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of the execution (e.g., 'submitted', 'failed')."
+        },
+        "message": {
+          "type": "string",
+          "description": "Any relevant message from the exchange API."
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_trade_execution",
+      "label": "Trade Execution"
+    }
+  },
+  {
+    "id": "bot-management-agent",
+    "agentId": "agent_1762421550007",
+    "name": "Bot Management Agent",
+    "description": "Manages the deployment, monitoring, and lifecycle of live trading bots.",
+    "status": "active",
+    "icon": "Tv",
+    "tools": [
+      "deploy_bot",
+      "stop_bot",
+      "monitor_performance"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are a bot management agent. You manage the deployment, monitoring, and lifecycle of live trading bots. You can start, stop, and get the status of trading bots running on the platform.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "botId": {
+          "type": "string"
+        },
+        "action": {
+          "type": "string",
+          "enum": [
+            "deploy",
+            "stop",
+            "status"
+          ]
+        },
+        "result": {
+          "type": "string",
+          "description": "The result of the action."
+        }
+      },
+      "required": [
+        "botId",
+        "action",
+        "result"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_bot_lifecycle",
+      "label": "Bot Lifecycle Management"
+    }
+  },
+  {
+    "id": "workflow-agent",
+    "agentId": "agent_1762421550008",
+    "name": "Workflow Agent",
+    "description": "Defines and manages the sequences of tasks that constitute a full trading workflow.",
+    "status": "active",
+    "icon": "Workflow",
+    "tools": [
+      "workflow_builder",
+      "step_sequencing",
+      "dependency_management"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are a workflow agent. You define and manage the sequence of tasks that constitute a full trading workflow, from research to execution. You create a directed acyclic graph (DAG) of tasks and their dependencies.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "workflowId": {
+          "type": "string"
+        },
+        "workflowName": {
+          "type": "string"
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "taskId": {
+                "type": "string"
+              },
+              "agentId": {
+                "type": "string"
+              },
+              "dependencies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "taskId",
+              "agentId"
+            ]
+          }
+        }
+      },
+      "required": [
+        "workflowId",
+        "workflowName",
+        "tasks"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_workflow_definition",
+      "label": "Workflow Definition"
+    }
+  },
+  {
+    "id": "memory-agent",
+    "agentId": "agent_1762421550009",
+    "name": "Memory Agent",
+    "description": "Manages the short-term and long-term memory of all agents, storing key learnings.",
+    "status": "active",
+    "icon": "MemoryStick",
+    "tools": [
+      "read_memory",
+      "write_memory",
+      "search_memory"
+    ],
+    "model": "deepseek/deepseek-chat-v3.1:free",
+    "systemPrompt": "You are the memory agent. You manage the short-term and long-term memory for all other agents. You can read, write, and search the knowledge base for key learnings, past decisions, and outcomes.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "string",
+          "enum": [
+            "read",
+            "write",
+            "search"
+          ]
+        },
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "object",
+          "description": "The data to write, or the result of a read/search."
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "success",
+            "not_found",
+            "failed"
+          ]
+        }
+      },
+      "required": [
+        "action",
+        "status"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_memory_access",
+      "label": "Memory Access"
+    }
+  },
+  {
+    "id": "monitor-agent",
+    "agentId": "agent_1762421550010",
+    "name": "Platform Monitor Agent",
+    "description": "Monitors the health of the platform, API connections, and agent performance.",
+    "status": "active",
+    "icon": "ShieldCheck",
+    "tools": [
+      "health_check_api",
+      "error_logging",
+      "performance_metrics"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are the platform monitor agent. You constantly monitor the health of the platform, API connections, and agent performance. You report anomalies, errors, and performance degradation.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "healthy",
+            "warning",
+            "error"
+          ]
+        },
+        "component": {
+          "type": "string",
+          "description": "The component being checked (e.g., 'BlofinAPI', 'Agent_123')."
+        },
+        "metric": {
+          "type": "string",
+          "description": "The metric being reported (e.g., 'latency', 'error_rate')."
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "component",
+        "metric",
+        "value"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_platform_monitoring",
+      "label": "Platform Monitoring"
+    }
+  },
+  {
+    "id": "optimization-agent",
+    "agentId": "agent_1762421550011",
+    "name": "Optimization Agent",
+    "description": "A general-purpose agent for optimizing various platform parameters and workflows.",
+    "status": "active",
+    "icon": "SlidersHorizontal",
+    "tools": [
+      "parameter_tuning",
+      "performance_analysis",
+      "resource_allocation"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are a general-purpose optimization agent. You are given a target (e.g., a strategy, a workflow, a system parameter) and a goal (e.g., 'increase profitability', 'reduce latency'). You will propose and test changes to achieve this goal.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "targetId": {
+          "type": "string"
+        },
+        "parameter": {
+          "type": "string"
+        },
+        "proposedValue": {
+          "type": "any"
+        },
+        "expectedOutcome": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "targetId",
+        "parameter",
+        "proposedValue"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_generic_optimization",
+      "label": "Generic Optimization"
+    }
+  },
+  {
+    "id": "strategy-optimization-agent",
+    "agentId": "agent_1762421550012",
+    "name": "Strategy Optimization Agent",
+    "description": "Optimizes trading strategies by adjusting indicators, timeframes, and risk parameters.",
+    "status": "active",
+    "icon": "SlidersHorizontal",
+    "tools": [
+      "strategy_analysis",
+      "parameter_grid_search",
+      "risk_reward_tuning"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are a strategy optimization agent. You receive a trading strategy and its backtest results. Your goal is to improve its performance by adjusting indicators, timeframes, and risk parameters. You will propose a modified strategy.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "originalStrategyId": {
+          "type": "string"
+        },
+        "optimizedStrategy": {
+          "type": "object",
+          "description": "The full JSON object of the new, optimized strategy."
+        },
+        "justification": {
+          "type": "string",
+          "description": "An explanation of why the proposed changes should improve performance."
+        }
+      },
+      "required": [
+        "originalStrategyId",
+        "optimizedStrategy",
+        "justification"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_strategy_optimization",
+      "label": "Strategy Optimization"
+    }
+  },
+  {
+    "id": "backtesting-agent",
+    "agentId": "agent_1762421550013",
+    "name": "Backtesting Agent",
+    "description": "Runs historical backtests on trading strategies to evaluate performance.",
+    "status": "active",
+    "icon": "Bot",
+    "tools": [
+      "data_granularity_tuning",
+      "simulation_speed_opt",
+      "slippage_fee_modeling"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are a backtesting agent. Your role is to run a historical backtest on a given trading strategy. You will output the performance metrics.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "strategyId": {
+          "type": "string"
+        },
+        "profitability": {
+          "type": "number"
+        },
+        "sharpeRatio": {
+          "type": "number"
+        },
+        "maxDrawdown": {
+          "type": "number"
+        },
+        "tradeCount": {
+          "type": "number"
+        },
+        "isProfitable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "strategyId",
+        "isProfitable"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_backtesting_opt",
+      "label": "Backtesting Engine Tuning"
+    }
+  },
+  {
+    "id": "performance-optimization-agent",
+    "agentId": "agent_1762421550014",
+    "name": "Performance Optimization Agent",
+    "description": "Monitors and optimizes the overall performance of the trading system and infrastructure.",
+    "status": "active",
+    "icon": "SlidersHorizontal",
+    "tools": [
+      "api_latency_monitoring",
+      "database_query_opt",
+      "resource_scaling"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are a performance optimization agent. You monitor and optimize the overall performance of the trading system and infrastructure, including API latency, database queries, and resource allocation.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "area": {
+          "type": "string",
+          "enum": [
+            "api_latency",
+            "database",
+            "resource"
+          ]
+        },
+        "action": {
+          "type": "string",
+          "description": "The specific optimization action to take."
+        },
+        "details": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "area",
+        "action"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_performance_opt",
+      "label": "System Performance Tuning"
+    }
+  },
+  {
+    "id": "bot-optimization-agent",
+    "agentId": "agent_1762421550015",
+    "name": "Bot Optimization Agent",
+    "description": "Adjusts the parameters of live trading bots to improve their execution and efficiency.",
+    "status": "active",
+    "icon": "SlidersHorizontal",
+    "tools": [
+      "real_time_param_tuning",
+      "order_execution_analysis",
+      "risk_exposure_management"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are a bot optimization agent. You adjust the parameters of live trading bots in real-time to improve their execution efficiency and manage risk exposure based on current market volatility and order book depth.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "botId": {
+          "type": "string"
+        },
+        "parameterToTune": {
+          "type": "string"
+        },
+        "newValue": {
+          "type": "any"
+        },
+        "justification": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "botId",
+        "parameterToTune",
+        "newValue"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_bot_optimization",
+      "label": "Live Bot Optimization"
+    }
+  },
+  {
+    "id": "market-screener-agent",
+    "agentId": "agent_1762421550016",
+    "name": "Market Screener Agent",
+    "description": "Filters a list of instruments to find the one with the most compelling trading pattern or behavior.",
+    "status": "active",
+    "icon": "ScanSearch",
+    "tools": [
+      "real_time_scan",
+      "filter_criteria",
+      "opportunity_alert"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are a market screener agent. You receive a list of potentially interesting instruments from the Market Scanner. Your job is to analyze their recent price action (velocity, volatility) and select the single best candidate that exhibits a clear behavioral pattern (e.g., strongest momentum, volatility breakout) and does not have a currently open position.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "instrument": {
+          "type": "string"
+        },
+        "criteriaMatched": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "instrument",
+        "criteriaMatched",
+        "timestamp"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_market_screening",
+      "label": "Market Opportunity Screening"
+    }
+  },
+  {
+    "id": "position-monitor-agent",
+    "agentId": "agent_1762421550017",
+    "name": "Position Monitor Agent",
+    "description": "Monitors open positions for performance, risk, and potential adjustments.",
+    "status": "active",
+    "icon": "Eye",
+    "tools": [
+      "pnl_tracking",
+      "risk_analysis",
+      "adjustment_alerts"
+    ],
+    "model": "openrouter/auto",
+    "systemPrompt": "You are a position monitor agent. You monitor all open trading positions for performance, risk, and potential adjustments. You will track PnL and analyze risk metrics, alerting when a position requires manual review.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "positionId": {
+          "type": "string"
+        },
+        "pnl": {
+          "type": "number"
+        },
+        "pnlPercentage": {
+          "type": "number"
+        },
+        "alert": {
+          "type": "string",
+          "description": "An alert message if the position requires attention (e.g., 'Stop loss nearing', 'Take profit target reached')."
+        }
+      },
+      "required": [
+        "positionId",
+        "pnl",
+        "pnlPercentage"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_position_monitoring",
+      "label": "Position Monitoring"
+    }
+  },
+  {
+    "id": "risk-management-agent",
+    "agentId": "agent_1762421550018",
+    "name": "Risk Management Agent",
+    "description": "Analyzes and mitigates trading risks across all operations.",
+    "status": "active",
+    "icon": "ShieldAlert",
+    "tools": [
+      "risk_assessment",
+      "exposure_monitoring",
+      "stop_loss_management"
+    ],
+    "model": "openrouter/auto",
+    "systemPrompt": "You are a risk management agent. You analyze and mitigate trading risks across all operations. Your primary function is to assess portfolio-level exposure, calculate Value at Risk (VaR), and suggest hedging or position-sizing adjustments.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "portfolioVaR": {
+          "type": "number"
+        },
+        "exposureByAsset": {
+          "type": "object"
+        },
+        "recommendedAction": {
+          "type": "string",
+          "description": "A specific, actionable recommendation to mitigate risk (e.g., 'Reduce BTC exposure by 20%')."
+        }
+      },
+      "required": [
+        "portfolioVaR",
+        "recommendedAction"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_risk_management",
+      "label": "Portfolio Risk Management"
+    }
+  },
+  {
+    "id": "asset-management-agent",
+    "agentId": "agent_1762421550019",
+    "name": "Asset Management Agent",
+    "description": "Manages asset allocation and rebalancing within the portfolio.",
+    "status": "active",
+    "icon": "Landmark",
+    "tools": [
+      "asset_allocation",
+      "rebalancing_rules",
+      "asset_performance_tracking"
+    ],
+    "model": "openrouter/auto",
+    "systemPrompt": "You are an asset management agent. You manage the strategic allocation of assets and portfolio rebalancing based on predefined rules and long-term goals. You monitor asset performance and suggest rebalancing actions.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "currentAllocation": {
+          "type": "object"
+        },
+        "targetAllocation": {
+          "type": "object"
+        },
+        "rebalancingActions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of actions to perform to rebalance the portfolio."
+        }
+      },
+      "required": [
+        "currentAllocation",
+        "targetAllocation",
+        "rebalancingActions"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_asset_management",
+      "label": "Asset & Portfolio Rebalancing"
+    }
+  },
+  {
+    "id": "portfolio-management-agent",
+    "agentId": "agent_1762421550020",
+    "name": "Portfolio Management Agent",
+    "description": "Oversees the entire investment portfolio, ensuring alignment with overall strategy.",
+    "status": "active",
+    "icon": "PieChart",
+    "tools": [
+      "portfolio_analysis",
+      "holistic_risk_assessment",
+      "long_term_strategy_alignment"
+    ],
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "systemPrompt": "You are a portfolio management agent. You provide a holistic overview of the entire investment portfolio, ensuring alignment with the overall strategy. You generate high-level reports on performance, risk, and asset allocation.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "totalValue": {
+          "type": "number"
+        },
+        "overallPnl": {
+          "type": "number"
+        },
+        "sharpeRatio": {
+          "type": "number"
+        },
+        "strategyAlignmentScore": {
+          "type": "number",
+          "description": "A score from 0 to 1 indicating how well the portfolio aligns with its stated long-term strategy."
+        }
+      },
+      "required": [
+        "totalValue",
+        "overallPnl",
+        "sharpeRatio",
+        "strategyAlignmentScore"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_portfolio_overview",
+      "label": "Portfolio Overview & Reporting"
+    }
+  },
+  {
+    "id": "market-scanner-agent",
+    "agentId": "agent_1762495675000",
+    "name": "Market Scanner Agent",
+    "description": "Scans the entire market to find a list of instruments with high trading activity and volatility.",
+    "status": "active",
+    "icon": "ScanSearch",
+    "tools": [
+      "blofin_market_scan"
+    ],
+    "systemPrompt": "You are a market scanning agent. Your purpose is to scan the entire market to identify a list of instruments that are showing unusually high trading activity or volatility (e.g., top 24h volume, top 24h gainers/losers). Your output should be a list of these potential opportunities for the Market Screener Agent to analyze further.",
+    "jsonOutputSchema": {
+      "type": "object",
+      "properties": {
+        "instrument": {
+          "type": "string",
+          "description": "The symbol of the most compelling instrument, e.g., BTC-USDT."
+        },
+        "reason": {
+          "type": "string",
+          "description": "The justification for selecting this instrument, including key metrics like 24h volume and volatility."
+        }
+      },
+      "required": [
+        "instrument",
+        "reason"
+      ]
+    },
+    "workflow": {
+      "workflowId": "wf_autonomous_trading_main",
+      "label": "Autonomous Trading"
+    },
+    "model": "tngtech/deepseek-r1t2-chimera:free"
+  }
+]
