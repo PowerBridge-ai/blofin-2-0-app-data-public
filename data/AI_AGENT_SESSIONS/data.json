@@ -1834,5 +1834,223 @@
     "status": "failed",
     "error": "Failed to fetch",
     "endTime": "2025-11-10T03:07:13.807Z"
+  },
+  {
+    "id": "session_1762769912220",
+    "status": "running",
+    "startTime": "2025-11-10T10:18:32.221Z"
+  },
+  {
+    "id": "session_1762769912220",
+    "status": "failed",
+    "error": "All available models failed to provide a valid response.",
+    "endTime": "2025-11-10T10:18:39.134Z"
+  },
+  {
+    "id": "session_1762770013264",
+    "status": "running",
+    "startTime": "2025-11-10T10:20:13.264Z"
+  },
+  {
+    "id": "session_1762770013264",
+    "status": "failed",
+    "error": "All available models failed to provide a valid response.",
+    "endTime": "2025-11-10T10:20:21.719Z"
+  },
+  {
+    "id": "session_1762770091627",
+    "status": "running",
+    "startTime": "2025-11-10T10:21:31.627Z"
+  },
+  {
+    "id": "session_1762770091627",
+    "status": "failed",
+    "error": "All available models failed to provide a valid response.",
+    "endTime": "2025-11-10T10:21:41.417Z"
+  },
+  {
+    "id": "session_1762770236035",
+    "status": "running",
+    "startTime": "2025-11-10T10:23:56.035Z"
+  },
+  {
+    "id": "session_1762770236035",
+    "status": "failed",
+    "error": "Failed to fetch",
+    "endTime": "2025-11-10T10:25:01.088Z"
+  },
+  {
+    "id": "session_1762770374045",
+    "status": "running",
+    "startTime": "2025-11-10T10:26:14.046Z"
+  },
+  {
+    "id": "session_1762770374045",
+    "status": "completed",
+    "endTime": "2025-11-10T10:28:17.738Z"
+  },
+  {
+    "id": "session_1762771399912",
+    "status": "running",
+    "startTime": "2025-11-10T10:43:19.912Z"
+  },
+  {
+    "id": "session_1762771399912",
+    "status": "completed",
+    "endTime": "2025-11-10T10:45:27.548Z"
+  },
+  {
+    "id": "session_1762772455675",
+    "status": "running",
+    "startTime": "2025-11-10T11:00:55.676Z"
+  },
+  {
+    "id": "session_1762772455675",
+    "status": "failed",
+    "error": "Agent with ID \"\" not found for step \"create detailed operational tasking for autonomously fins instrument/symbol that meets volatility thresholds researching, developing, back testing, paper trading, deploying, and optimizing DCA trading strategies smart goals, objectives, tasks, and checklist then assign agents to tasks, develop workflows using ai agent then test each step in workflow then run unit testing for each ai agent workflow step task and checklist for accomplishing the autonomous trading\".",
+    "endTime": "2025-11-10T11:00:57.739Z"
+  },
+  {
+    "id": "session_1762773296571",
+    "status": "running",
+    "startTime": "2025-11-10T11:14:56.571Z"
+  },
+  {
+    "id": "session_1762773296571",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-10T11:15:57.304Z"
+  },
+  {
+    "id": "session_1762773740771",
+    "status": "running",
+    "startTime": "2025-11-10T11:22:20.772Z"
+  },
+  {
+    "id": "session_1762773740771",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-10T11:23:21.714Z"
+  },
+  {
+    "id": "session_1762774032839",
+    "status": "running",
+    "startTime": "2025-11-10T11:27:12.839Z"
+  },
+  {
+    "id": "session_1762774032839",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-10T11:28:13.556Z"
+  },
+  {
+    "id": "session_1762774356650",
+    "status": "running",
+    "startTime": "2025-11-10T11:32:36.651Z"
+  },
+  {
+    "id": "session_1762774356650",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-10T11:33:37.696Z"
+  },
+  {
+    "id": "session_1762774587939",
+    "status": "running",
+    "startTime": "2025-11-10T11:36:27.939Z"
+  },
+  {
+    "id": "session_1762774587939",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-10T11:37:29.267Z"
+  },
+  {
+    "id": "session_1762775066997",
+    "status": "running",
+    "startTime": "2025-11-10T11:44:26.997Z"
+  },
+  {
+    "id": "session_1762775066997",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-10T11:45:28.005Z"
+  },
+  {
+    "id": "session_1762775213137",
+    "status": "running",
+    "startTime": "2025-11-10T11:46:53.138Z"
+  },
+  {
+    "id": "session_1762775213137",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-10T11:47:54.394Z"
+  },
+  {
+    "id": "session_1762777429141",
+    "status": "running",
+    "startTime": "2025-11-10T12:23:49.141Z"
+  },
+  {
+    "id": "session_1762777429141",
+    "status": "failed",
+    "error": "Failed to fetch",
+    "endTime": "2025-11-10T12:26:33.463Z"
+  },
+  {
+    "id": "session_1762777953629",
+    "status": "running",
+    "startTime": "2025-11-10T12:32:33.630Z"
+  },
+  {
+    "id": "session_1762777953629",
+    "status": "failed",
+    "error": "Failed to fetch",
+    "endTime": "2025-11-10T12:32:50.430Z"
+  },
+  {
+    "id": "session_1762778144007",
+    "status": "running",
+    "startTime": "2025-11-10T12:35:44.008Z"
+  },
+  {
+    "id": "session_1762778144007",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-10T12:37:31.928Z"
+  },
+  {
+    "id": "session_1762782859687",
+    "status": "running",
+    "startTime": "2025-11-10T13:54:19.690Z"
+  },
+  {
+    "id": "session_1762782859687",
+    "status": "failed",
+    "error": "Too Many Requests: OpenRouter API rate limit exceeded.",
+    "endTime": "2025-11-10T13:54:21.829Z"
+  },
+  {
+    "id": "session_1762785919800",
+    "status": "running",
+    "startTime": "2025-11-10T14:45:19.801Z"
+  },
+  {
+    "id": "session_1762785919800",
+    "status": "failed",
+    "error": "Too Many Requests: OpenRouter API rate limit exceeded.",
+    "endTime": "2025-11-10T14:50:31.383Z"
+  },
+  {
+    "id": "session_1762786659172",
+    "status": "running",
+    "startTime": "2025-11-10T14:57:39.172Z"
+  },
+  {
+    "id": "session_1762786659172",
+    "status": "failed",
+    "error": "Too Many Requests: OpenRouter API rate limit exceeded.",
+    "endTime": "2025-11-10T14:57:41.870Z"
   }
 ]
