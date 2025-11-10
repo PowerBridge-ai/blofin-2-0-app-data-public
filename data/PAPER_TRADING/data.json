@@ -1,0 +1,228 @@
+[
+  {
+    "deploymentId": "dep_paper_1762547635189",
+    "strategy": {
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "WEEKLY",
+        "7_DAY"
+      ],
+      "indicators": [
+        "RSI(14)",
+        "MACD(12,26,9)",
+        "SMA(50)",
+        "SMA(200)",
+        "VOLUME (50-period)"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 0.15,
+        "orderAmount": 0.05,
+        "maxOrders": 12
+      }
+    },
+    "status": "Deployment to paper initiated successfully."
+  },
+  {
+    "deploymentId": "dep_paper_1762492294913",
+    "strategy": {
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "4H",
+        "Daily"
+      ],
+      "indicators": [
+        "50 SMA (Short-term Trend)",
+        "200 SMA (Long-term Trend)",
+        "RSI (14, 30/70 Thresholds)",
+        "Bollinger Bands (20, 2 Std Dev)",
+        "Fibonacci Retracement Levels (38.2%, 50%, 61.8%)"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 0.15,
+        "orderAmount": 500,
+        "maxOrders": 1e+255
+      }
+    },
+    "status": "Deployment to paper initiated successfully."
+  },
+  {
+    "deploymentId": "dep_paper_1762491474157",
+    "strategy": {
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "daily",
+        "4h"
+      ],
+      "indicators": [
+        "EMA: 50 (short-term trend confirmation)",
+        "EMA: 200 (long-term trend confirmation)",
+        "RSI: 14-period (overbought/oversold detection)",
+        "SMA: 50-period (dynamic support/resistance)"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 0.5,
+        "orderAmount": 150,
+        "maxOrders": 250
+      }
+    },
+    "status": "Deployment to paper initiated successfully."
+  },
+  {
+    "deploymentId": "dep_paper_1762491324051",
+    "strategy": {
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "Weekly",
+        "Daily"
+      ],
+      "indicators": [
+        "MACD",
+        "RSI"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 0.001,
+        "orderAmount": 100,
+        "maxOrders": 1000000000
+      }
+    },
+    "status": "Deployment to paper initiated successfully."
+  },
+  {
+    "deploymentId": "dep_paper_1762458260180",
+    "strategy": {
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "6-hour",
+        "daily"
+      ],
+      "indicators": [
+        "20-day EMA (trend filter)",
+        "50-day EMA (momentum confirmation)",
+        "RSI (14-period)",
+        "On-Balance Volume (OBV)"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 3000,
+        "orderAmount": 5,
+        "maxOrders": 21
+      }
+    },
+    "status": "Deployment to paper initiated successfully."
+  },
+  {
+    "deploymentId": "dep_paper_1762453799573",
+    "strategy": {
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "Base DCA Interval: Bi-weekly (14 days) > Change to Weekly (7 days)",
+        "Trend Confirmation: Daily & Weekly Charts",
+        "Signal Monitoring: 4-hour & 1-day Timeframes"
+      ],
+      "indicators": [
+        "EMA: Use 20/50-EMA crossover on Daily AND 50-EMA > 200-EMA on Weekly (dual timeframe confirmation)",
+        "RSI (14-period): Buy when RSI dips into 30-45 (oversold with recovery) with bullish EMA alignment",
+        "Volume: Require volume spike (>150% of 20-day avg) on breakout/retest signals",
+        "Support/Resistance: Use Fibonacci retracement levels (38.2%-61.8%) for precision buy zones"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 100,
+        "orderAmount": 300,
+        "maxOrders": 6
+      }
+    },
+    "status": "Deployment to paper initiated successfully."
+  },
+  {
+    "deploymentId": "dep_paper_1762453718170",
+    "strategy": {
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "1h",
+        "4h",
+        "1d"
+      ],
+      "indicators": [
+        "SMA_50",
+        "SMA_200",
+        "RSI_14",
+        "MACD_12_26_9",
+        "BB_20_2",
+        "StochRSI_14_14_3_3"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 0.2,
+        "orderAmount": 0.1,
+        "maxOrders": 5000000000000000
+      }
+    },
+    "status": "Deployment to paper initiated successfully."
+  },
+  {
+    "deploymentId": "dep_paper_1762421547913",
+    "strategy": {
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "1D",
+        "4H"
+      ],
+      "indicators": [
+        "RSI (14)",
+        "EMA (50/200)",
+        "On-Balance Volume (OBV)",
+        "Bollinger Bands (20,2)"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 10000,
+        "orderAmount": 500,
+        "maxOrders": 20
+      }
+    },
+    "status": "Deployment to paper initiated successfully."
+  },
+  {
+    "deploymentId": "dep_paper_1762606994151",
+    "strategy": {
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "1h",
+        "4h",
+        "1d"
+      ],
+      "indicators": [
+        "EMA 20/50 crossover",
+        "RSI (14)",
+        "Volume (MA 20)",
+        "MACD (12,26,9)"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 1000,
+        "orderAmount": 100,
+        "maxOrders": 10
+      }
+    },
+    "status": "Deployment to paper initiated successfully."
+  },
+  {
+    "deploymentId": "dep_paper_1762606994151",
+    "strategy": {
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "1h",
+        "4h",
+        "1d"
+      ],
+      "indicators": [
+        "EMA 20/50 crossover",
+        "RSI (14)",
+        "Volume (MA 20)",
+        "MACD (12,26,9)"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 1000,
+        "orderAmount": 100,
+        "maxOrders": 10
+      }
+    },
+    "status": "Deployment to paper initiated successfully."
+  }
+]
