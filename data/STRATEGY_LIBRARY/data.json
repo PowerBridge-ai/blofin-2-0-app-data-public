@@ -1,0 +1,497 @@
+[
+  {
+    "id": "strat_1762421055826",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "Daily (for trend confirmation)",
+      "Weekly (DCA execution) - Primary",
+      "Monthly (higher-trend validation)"
+    ],
+    "indicators": [
+      "SMAs: 50-period & 200-period (bullish crossover = trend confirmation)",
+      "RSI (14-period): Identify overbought (>70) or pullbacks (<40)",
+      "MACD (12-26-9): Bullish momentum confirmation",
+      "On-chain metrics (optional): MVRV Z-Score >1.5 to confirm bullish regime"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 1000,
+      "orderAmount": 100,
+      "maxOrders": 20
+    }
+  },
+  {
+    "id": "strat_1762421546714",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "1D",
+      "4H"
+    ],
+    "indicators": [
+      "RSI (14)",
+      "EMA (50/200)",
+      "On-Balance Volume (OBV)",
+      "Bollinger Bands (20,2)"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 10000,
+      "orderAmount": 500,
+      "maxOrders": 20
+    }
+  },
+  {
+    "id": "strat_1762430878818",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "Base DCA Interval: Weekly",
+      "Tactical Adjustment Monitoring: Daily",
+      "Portfolio Rebalancing: Quarterly"
+    ],
+    "indicators": [
+      "Relative Strength Index (RSI 14-period) - Identify short-term overbought/sold conditions",
+      "EMA Ribbon (20/50/200-day) - Confirm bullish trend alignment",
+      "MACD (12/26/9) - Signal momentum shifts",
+      "Bollinger Bands (20,2) - Detect volatility contraction/expansion"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 1000,
+      "orderAmount": 250,
+      "maxOrders": 4
+    }
+  },
+  {
+    "id": "strat_1762453433244",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "daily",
+      "4-hour"
+    ],
+    "indicators": [
+      "RSI (14)",
+      "200-day SMA",
+      "Bollinger Bands (20,2)"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 1000,
+      "orderAmount": 100,
+      "maxOrders": 10
+    }
+  },
+  {
+    "id": "strat_1762453719155",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "1h",
+      "4h",
+      "1d"
+    ],
+    "indicators": [
+      "SMA_50",
+      "SMA_200",
+      "RSI_14",
+      "MACD_12_26_9",
+      "BB_20_2",
+      "StochRSI_14_14_3_3"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 0.2,
+      "orderAmount": 0.1,
+      "maxOrders": 5000000000000000
+    }
+  },
+  {
+    "id": "strat_1762453774820",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "Base DCA Interval: Bi-weekly (14 days)",
+      "Trend Confirmation: Daily & Weekly Charts",
+      "Signal Monitoring: 4-hour & 1-day Timeframes"
+    ],
+    "indicators": [
+      "EMA (50/200) on Daily Chart: Bullish bias when 50-EMA > 200-EMA",
+      "RSI (14-period): Buy when RSI 40-65 (avoid overbought zones >70)",
+      "Volume: Confirm bullish momentum with volume > 20-day SMA",
+      "Support/Resistance Levels: Scale buys near key support zones"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 10,
+      "orderAmount": 500,
+      "maxOrders": 10
+    }
+  },
+  {
+    "id": "strat_opt_1762453800650",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "Base DCA Interval: Bi-weekly (14 days) > Change to Weekly (7 days)",
+      "Trend Confirmation: Daily & Weekly Charts",
+      "Signal Monitoring: 4-hour & 1-day Timeframes"
+    ],
+    "indicators": [
+      "EMA: Use 20/50-EMA crossover on Daily AND 50-EMA > 200-EMA on Weekly (dual timeframe confirmation)",
+      "RSI (14-period): Buy when RSI dips into 30-45 (oversold with recovery) with bullish EMA alignment",
+      "Volume: Require volume spike (>150% of 20-day avg) on breakout/retest signals",
+      "Support/Resistance: Use Fibonacci retracement levels (38.2%-61.8%) for precision buy zones"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 100,
+      "orderAmount": 300,
+      "maxOrders": 6
+    }
+  },
+  {
+    "id": "strat_1762453868023",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "Base DCA Interval: Bi-weekly (every 2 weeks) - Core strategy execution",
+      "Technical Analysis Intervals: Daily/4H - For indicator-based triggers"
+    ],
+    "indicators": [
+      "RSI (14-period): Monitor overbought/oversold conditions",
+      "50-day SMA & 200-day SMA Trend filter + dip identification",
+      "MACD (12,26,9): Bullish momentum confirmation"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 10000,
+      "orderAmount": 500,
+      "maxOrders": 20
+    }
+  },
+  {
+    "id": "strat_1762458261162",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "6-hour",
+      "daily"
+    ],
+    "indicators": [
+      "20-day EMA (trend filter)",
+      "50-day EMA (momentum confirmation)",
+      "RSI (14-period)",
+      "On-Balance Volume (OBV)"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 3000,
+      "orderAmount": 5,
+      "maxOrders": 21
+    }
+  },
+  {
+    "id": "strat_1762491326297",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "Weekly",
+      "Daily"
+    ],
+    "indicators": [
+      "MACD",
+      "RSI"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 0.001,
+      "orderAmount": 100,
+      "maxOrders": 1000000000
+    }
+  },
+  {
+    "id": "strat_1762491476256",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "daily",
+      "4h"
+    ],
+    "indicators": [
+      "EMA: 50 (short-term trend confirmation)",
+      "EMA: 200 (long-term trend confirmation)",
+      "RSI: 14-period (overbought/oversold detection)",
+      "SMA: 50-period (dynamic support/resistance)"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 0.5,
+      "orderAmount": 150,
+      "maxOrders": 250
+    }
+  },
+  {
+    "id": "strat_1762491593026",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "D1",
+      "4H",
+      "1H"
+    ],
+    "indicators": [
+      "RSI14",
+      "MACD12_26_9",
+      "EMA50",
+      "EMA200"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 1000,
+      "orderAmount": 1000,
+      "maxOrders": 80000000
+    }
+  },
+  {
+    "id": "strat_1762492296951",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "4H",
+      "Daily"
+    ],
+    "indicators": [
+      "50 SMA (Short-term Trend)",
+      "200 SMA (Long-term Trend)",
+      "RSI (14, 30/70 Thresholds)",
+      "Bollinger Bands (20, 2 Std Dev)",
+      "Fibonacci Retracement Levels (38.2%, 50%, 61.8%)"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 0.15,
+      "orderAmount": 500,
+      "maxOrders": 1e+255
+    }
+  },
+  {
+    "id": "strat_1762547635676",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "WEEKLY",
+      "7_DAY"
+    ],
+    "indicators": [
+      "RSI(14)",
+      "MACD(12,26,9)",
+      "SMA(50)",
+      "SMA(200)",
+      "VOLUME (50-period)"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 0.15,
+      "orderAmount": 0.05,
+      "maxOrders": 12
+    }
+  },
+  {
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "1h",
+      "4h",
+      "1d"
+    ],
+    "indicators": [
+      "Time-Weighted Average Price (TWAP)",
+      "50-period Simple Moving Average (SMA)",
+      "20-period Bollinger Bands (2 standard deviations)",
+      "Money Slump Index (14-period)",
+      "Stochastic RSI (14, 3)",
+      "True Strength Index (TSI) (10 periods)",
+      "Choppiness Index (5, 50)"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 1000,
+      "orderAmount": 100,
+      "maxOrders": 1e+30
+    },
+    "id": "strat_1762549910858"
+  },
+  {
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "1h",
+      "4h"
+    ],
+    "indicators": [
+      "SMA_50",
+      "SMA_200"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 100,
+      "orderAmount": 100,
+      "maxOrders": 1000000000
+    },
+    "id": "strat_1762550038335"
+  },
+  {
+    "instrument": "ETH-USDT",
+    "timeframes": [
+      "4h",
+      "1d"
+    ],
+    "indicators": [
+      "SHARP_RATIO",
+      "MOMENTUM"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 150,
+      "orderAmount": 50,
+      "maxOrders": 1000
+    },
+    "id": "strat_1762551904978",
+    "name": "ETH-USDT_4h_20251107_164504",
+    "createdAt": "2025-11-07T21:45:04.978Z"
+  },
+  {
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "7d",
+      "15d",
+      "30d"
+    ],
+    "indicators": [
+      "RSI",
+      "SMA(50)",
+      "MACD"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 1000,
+      "orderAmount": 100,
+      "maxOrders": 10
+    },
+    "id": "strat_1762551962780",
+    "name": "BTC-USDT_7d_20251107_164602",
+    "createdAt": "2025-11-07T21:46:02.780Z"
+  },
+  {
+    "id": "strat_1762606965688",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "1h",
+      "4h",
+      "1d"
+    ],
+    "indicators": [
+      "EMA 20/50 crossover",
+      "RSI (14)",
+      "Volume (MA 20)",
+      "MACD (12,26,9)"
+    ],
+    "dcaConfig": {
+      "initialInvestment": 1000,
+      "orderAmount": 100,
+      "maxOrders": 10
+    }
+  },
+  {
+    "id": "strat_1762623185093",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "4-hour",
+      "daily",
+      "weekly"
+    ],
+    "indicators": [
+      "RSI (14 period, oversold <30, overbought >70)",
+      "EMA (20-day & 50-day crossover)",
+      "BTC Rainbow Chart (Momentum-based ranges)"
+    ],
+    "dcaConfig": {
+      "strategy": "long",
+      "baseOrderVolume": 70,
+      "safetyOrderVolume": 30,
+      "takeProfit": 1.07,
+      "maxSafetyOrders": 3,
+      "safetyOrderStepPercentage": 2.5,
+      "takeProfitType": "base",
+      "martingaleVolumeCoefficient": 1,
+      "martingaleStepCoefficient": 0,
+      "stopLossType": "stop_loss",
+      "leverageType": "not_specified",
+      "startOrderType": "limit",
+      "trailingEnabled": false
+    }
+  },
+  {
+    "id": "strat_1762623320642",
+    "instrument": "BTC/USDT",
+    "timeframes": [
+      "Primary: 4H",
+      "Confirmation: 1H",
+      "Execution: 15M"
+    ],
+    "indicators": [
+      "EMA(12) & EMA(26) (Price Trend Filter)",
+      "RSI(14) (Momentum & Overbought/Oversold Filter)",
+      "Bollinger Bands(20,2) (Volatility & Entry Zones)",
+      "Volume Profile (Spotting institutional interest)",
+      "BTC Dominance & USDT.D (Macro sentiment filter — weekly check)"
+    ],
+    "dcaConfig": {
+      "strategy": "short",
+      "baseOrderVolume": 0.05,
+      "safetyOrderVolume": 0.07,
+      "takeProfit": 12,
+      "maxSafetyOrders": 5,
+      "safetyOrderStepPercentage": 1.5,
+      "takeProfitType": "base",
+      "martingaleVolumeCoefficient": 1.25,
+      "martingaleStepCoefficient": 1,
+      "stopLossType": "stop_loss",
+      "leverageType": "not_specified",
+      "startOrderType": "limit",
+      "trailingEnabled": true,
+      "trailingDeviation": 3.5
+    }
+  },
+  {
+    "id": "strat_1762623944895",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "daily",
+      "weekly",
+      "monthly"
+    ],
+    "indicators": [
+      "200-day SMA",
+      "RSI (14-period)",
+      "MACD (12,26,9)",
+      "Volume Profile"
+    ],
+    "dcaConfig": {
+      "strategy": "long",
+      "baseOrderVolume": 2,
+      "safetyOrderVolume": 1,
+      "takeProfit": 20,
+      "maxSafetyOrders": 3,
+      "safetyOrderStepPercentage": 10,
+      "takeProfitType": "base",
+      "martingaleVolumeCoefficient": 1,
+      "martingaleStepCoefficient": 1,
+      "stopLossType": "stop_loss",
+      "leverageType": "not_specified",
+      "startOrderType": "limit",
+      "trailingEnabled": false,
+      "trailingDeviation": 1
+    }
+  },
+  {
+    "id": "strat_1762633062112",
+    "instrument": "BTC-USDT",
+    "timeframes": [
+      "1h",
+      "4h",
+      "1d"
+    ],
+    "indicators": [
+      "RSI (14)",
+      "MACD (12,26,9)",
+      "Bollinger Bands (20,2)",
+      "Volume Oscillator"
+    ],
+    "dcaConfig": {
+      "strategy": "long",
+      "baseOrderVolume": 5,
+      "safetyOrderVolume": 2.5,
+      "takeProfit": 2.5,
+      "maxSafetyOrders": 5,
+      "safetyOrderStepPercentage": 1.5,
+      "takeProfitType": "total",
+      "martingaleVolumeCoefficient": 1.4,
+      "martingaleStepCoefficient": 1.2,
+      "stopLossPercentage": 15,
+      "stopLossType": "stop_loss",
+      "leverageType": "not_specified",
+      "startOrderType": "limit",
+      "trailingEnabled": false
+    }
+  }
+]
