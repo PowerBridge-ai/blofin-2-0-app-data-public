@@ -1,0 +1,27 @@
+[
+  {},
+  {
+    "deploymentId": "dep_paper_1762491590808",
+    "strategy": {
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "D1",
+        "4H",
+        "1H"
+      ],
+      "indicators": [
+        "RSI14",
+        "MACD12_26_9",
+        "EMA50",
+        "EMA200"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 1000,
+        "orderAmount": 1000,
+        "maxOrders": 80000000
+      }
+    },
+    "status": "Deployment to paper initiated successfully.",
+    "stoppedAt": "2025-11-08T12:44:01.389Z"
+  }
+]
