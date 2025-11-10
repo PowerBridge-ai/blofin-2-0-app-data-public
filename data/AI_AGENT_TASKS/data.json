@@ -1,0 +1,33 @@
+
+[
+  {
+    "id": "task_market_scan",
+    "name": "Scan Market for Volatility",
+    "description": "Scans the market to find the most volatile instruments based on recent price action.",
+    "category": "Data Analysis",
+    "type": "api_call",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "timeframe": { "type": "string", "description": "e.g., '1h', '4h', '1d'" },
+        "limit": { "type": "number", "description": "Number of top instruments to return." }
+      },
+      "required": ["timeframe", "limit"]
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "topMovers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "instrument": { "type": "string" },
+              "volatility": { "type": "number" }
+            }
+          }
+        }
+      }
+    }
+  }
+]
