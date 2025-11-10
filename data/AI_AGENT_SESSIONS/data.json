@@ -1,0 +1,1838 @@
+[
+  {
+    "id": "session_1762250448527",
+    "status": "running",
+    "startTime": "2025-11-04T10:00:48.527Z"
+  },
+  {
+    "id": "session_1762250448527",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'open-router/google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:00:49.819Z"
+  },
+  {
+    "id": "session_1762250474630",
+    "status": "running",
+    "startTime": "2025-11-04T10:01:14.630Z"
+  },
+  {
+    "id": "session_1762250474630",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'open-router/google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:01:15.665Z"
+  },
+  {
+    "id": "session_1762251326705",
+    "status": "running",
+    "startTime": "2025-11-04T10:15:26.705Z"
+  },
+  {
+    "id": "session_1762251326705",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:15:28.240Z"
+  },
+  {
+    "id": "session_1762251385364",
+    "status": "running",
+    "startTime": "2025-11-04T10:16:25.364Z"
+  },
+  {
+    "id": "session_1762251385364",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:16:26.380Z"
+  },
+  {
+    "id": "session_1762251539082",
+    "status": "running",
+    "startTime": "2025-11-04T10:18:59.083Z"
+  },
+  {
+    "id": "session_1762251539082",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'open-router/google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:19:00.694Z"
+  },
+  {
+    "id": "session_1762252763037",
+    "status": "running",
+    "startTime": "2025-11-04T10:39:23.037Z"
+  },
+  {
+    "id": "session_1762252763037",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:39:24.947Z"
+  },
+  {
+    "id": "session_1762252800326",
+    "status": "running",
+    "startTime": "2025-11-04T10:40:00.326Z"
+  },
+  {
+    "id": "session_1762252800326",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:40:01.934Z"
+  },
+  {
+    "id": "session_1762252810382",
+    "status": "running",
+    "startTime": "2025-11-04T10:40:10.382Z"
+  },
+  {
+    "id": "session_1762252810382",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:40:11.397Z"
+  },
+  {
+    "id": "session_1762252918131",
+    "status": "running",
+    "startTime": "2025-11-04T10:41:58.131Z"
+  },
+  {
+    "id": "session_1762252918131",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:41:59.990Z"
+  },
+  {
+    "id": "session_1762253025447",
+    "status": "running",
+    "startTime": "2025-11-04T10:43:45.448Z"
+  },
+  {
+    "id": "session_1762253025447",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:43:49.054Z"
+  },
+  {
+    "id": "session_1762253106067",
+    "status": "running",
+    "startTime": "2025-11-04T10:45:06.067Z"
+  },
+  {
+    "id": "session_1762253106067",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:45:07.105Z"
+  },
+  {
+    "id": "session_1762253120379",
+    "status": "running",
+    "startTime": "2025-11-04T10:45:20.379Z"
+  },
+  {
+    "id": "session_1762253120379",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:45:21.407Z"
+  },
+  {
+    "id": "session_1762253234992",
+    "status": "running",
+    "startTime": "2025-11-04T10:47:14.992Z"
+  },
+  {
+    "id": "session_1762253234992",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:47:16.268Z"
+  },
+  {
+    "id": "session_1762253399967",
+    "status": "running",
+    "startTime": "2025-11-04T10:49:59.967Z"
+  },
+  {
+    "id": "session_1762253399967",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:50:01.231Z"
+  },
+  {
+    "id": "session_1762253429615",
+    "status": "running",
+    "startTime": "2025-11-04T10:50:29.616Z"
+  },
+  {
+    "id": "session_1762253429615",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:50:30.961Z"
+  },
+  {
+    "id": "session_1762253586528",
+    "status": "running",
+    "startTime": "2025-11-04T10:53:06.528Z"
+  },
+  {
+    "id": "session_1762253586528",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:53:11.559Z"
+  },
+  {
+    "id": "session_1762253677931",
+    "status": "running",
+    "startTime": "2025-11-04T10:54:37.931Z"
+  },
+  {
+    "id": "session_1762253677931",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:54:38.996Z"
+  },
+  {
+    "id": "session_1762253687236",
+    "status": "running",
+    "startTime": "2025-11-04T10:54:47.237Z"
+  },
+  {
+    "id": "session_1762253687236",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:54:48.401Z"
+  },
+  {
+    "id": "session_1762253813544",
+    "status": "running",
+    "startTime": "2025-11-04T10:56:53.544Z"
+  },
+  {
+    "id": "session_1762253813544",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:56:55.187Z"
+  },
+  {
+    "id": "session_1762253902571",
+    "status": "running",
+    "startTime": "2025-11-04T10:58:22.572Z"
+  },
+  {
+    "id": "session_1762253902571",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:58:24.286Z"
+  },
+  {
+    "id": "session_1762253946061",
+    "status": "running",
+    "startTime": "2025-11-04T10:59:06.061Z"
+  },
+  {
+    "id": "session_1762253946061",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T10:59:07.127Z"
+  },
+  {
+    "id": "session_1762254017744",
+    "status": "running",
+    "startTime": "2025-11-04T11:00:17.744Z"
+  },
+  {
+    "id": "session_1762254017744",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T11:00:19.086Z"
+  },
+  {
+    "id": "session_1762254195719",
+    "status": "running",
+    "startTime": "2025-11-04T11:03:15.719Z"
+  },
+  {
+    "id": "session_1762254195719",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T11:03:17.525Z"
+  },
+  {
+    "id": "session_1762254564847",
+    "status": "running",
+    "startTime": "2025-11-04T11:09:24.847Z"
+  },
+  {
+    "id": "session_1762254564847",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T11:09:26.743Z"
+  },
+  {
+    "id": "session_1762260415376",
+    "status": "running",
+    "startTime": "2025-11-04T12:46:55.378Z"
+  },
+  {
+    "id": "session_1762260415376",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T12:47:01.155Z"
+  },
+  {
+    "id": "session_1762263303206",
+    "status": "running",
+    "startTime": "2025-11-04T13:35:03.206Z"
+  },
+  {
+    "id": "session_1762263303206",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T13:35:05.068Z"
+  },
+  {
+    "id": "session_1762263449412",
+    "status": "running",
+    "startTime": "2025-11-04T13:37:29.412Z"
+  },
+  {
+    "id": "session_1762263449412",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T13:37:33.813Z"
+  },
+  {
+    "id": "session_1762263460468",
+    "status": "running",
+    "startTime": "2025-11-04T13:37:40.468Z"
+  },
+  {
+    "id": "session_1762263460468",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T13:37:41.798Z"
+  },
+  {
+    "id": "session_1762264023500",
+    "status": "running",
+    "startTime": "2025-11-04T13:47:03.500Z"
+  },
+  {
+    "id": "session_1762264023500",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T13:47:04.806Z"
+  },
+  {
+    "id": "session_1762264053740",
+    "status": "running",
+    "startTime": "2025-11-04T13:47:33.741Z"
+  },
+  {
+    "id": "session_1762264053740",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T13:47:34.976Z"
+  },
+  {
+    "id": "session_1762264458381",
+    "status": "running",
+    "startTime": "2025-11-04T13:54:18.382Z"
+  },
+  {
+    "id": "session_1762264458381",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T13:54:20.167Z"
+  },
+  {
+    "id": "session_1762265630445",
+    "status": "running",
+    "startTime": "2025-11-04T14:13:50.446Z"
+  },
+  {
+    "id": "session_1762265630445",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T14:13:51.932Z"
+  },
+  {
+    "id": "session_1762266157835",
+    "status": "running",
+    "startTime": "2025-11-04T14:22:37.835Z"
+  },
+  {
+    "id": "session_1762266157835",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T14:22:39.303Z"
+  },
+  {
+    "id": "session_1762266212021",
+    "status": "running",
+    "startTime": "2025-11-04T14:23:32.021Z"
+  },
+  {
+    "id": "session_1762266212021",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T14:23:33.437Z"
+  },
+  {
+    "id": "session_1762266299889",
+    "status": "running",
+    "startTime": "2025-11-04T14:24:59.889Z"
+  },
+  {
+    "id": "session_1762266299889",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T14:25:01.317Z"
+  },
+  {
+    "id": "session_1762266310977",
+    "status": "running",
+    "startTime": "2025-11-04T14:25:10.977Z"
+  },
+  {
+    "id": "session_1762266310977",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T14:25:12.085Z"
+  },
+  {
+    "id": "session_1762266379300",
+    "status": "running",
+    "startTime": "2025-11-04T14:26:19.300Z"
+  },
+  {
+    "id": "session_1762266379300",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T14:26:21.379Z"
+  },
+  {
+    "id": "session_1762272631739",
+    "status": "running",
+    "startTime": "2025-11-04T16:10:31.739Z"
+  },
+  {
+    "id": "session_1762272631739",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'open-router/google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T16:10:34.116Z"
+  },
+  {
+    "id": "session_1762272757632",
+    "status": "running",
+    "startTime": "2025-11-04T16:12:37.632Z"
+  },
+  {
+    "id": "session_1762272757632",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T16:12:39.252Z"
+  },
+  {
+    "id": "session_1762272840483",
+    "status": "running",
+    "startTime": "2025-11-04T16:14:00.483Z"
+  },
+  {
+    "id": "session_1762272840483",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T16:14:04.433Z"
+  },
+  {
+    "id": "session_1762272861388",
+    "status": "running",
+    "startTime": "2025-11-04T16:14:21.388Z"
+  },
+  {
+    "id": "session_1762272861388",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T16:14:22.346Z"
+  },
+  {
+    "id": "session_1762273096517",
+    "status": "running",
+    "startTime": "2025-11-04T16:18:16.518Z"
+  },
+  {
+    "id": "session_1762273096517",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T16:18:18.295Z"
+  },
+  {
+    "id": "session_1762273226211",
+    "status": "running",
+    "startTime": "2025-11-04T16:20:26.211Z"
+  },
+  {
+    "id": "session_1762273226211",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T16:20:27.733Z"
+  },
+  {
+    "id": "session_1762273439067",
+    "status": "running",
+    "startTime": "2025-11-04T16:23:59.067Z"
+  },
+  {
+    "id": "session_1762273439067",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T16:24:00.960Z"
+  },
+  {
+    "id": "session_1762273472884",
+    "status": "running",
+    "startTime": "2025-11-04T16:24:32.885Z"
+  },
+  {
+    "id": "session_1762273472884",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-04T16:24:33.996Z"
+  },
+  {
+    "id": "session_1762357728416",
+    "status": "running",
+    "startTime": "2025-11-05T15:48:48.416Z"
+  },
+  {
+    "id": "session_1762357728416",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T15:48:52.313Z"
+  },
+  {
+    "id": "session_1762358013011",
+    "status": "running",
+    "startTime": "2025-11-05T15:53:33.011Z"
+  },
+  {
+    "id": "session_1762358013011",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T15:53:34.901Z"
+  },
+  {
+    "id": "session_1762358105535",
+    "status": "running",
+    "startTime": "2025-11-05T15:55:05.535Z"
+  },
+  {
+    "id": "session_1762358105535",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T15:55:07.650Z"
+  },
+  {
+    "id": "session_1762358148369",
+    "status": "running",
+    "startTime": "2025-11-05T15:55:48.369Z"
+  },
+  {
+    "id": "session_1762358148369",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T15:55:49.765Z"
+  },
+  {
+    "id": "session_1762358174457",
+    "status": "running",
+    "startTime": "2025-11-05T15:56:14.458Z"
+  },
+  {
+    "id": "session_1762358174457",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T15:56:15.534Z"
+  },
+  {
+    "id": "session_1762358186434",
+    "status": "running",
+    "startTime": "2025-11-05T15:56:26.434Z"
+  },
+  {
+    "id": "session_1762358186434",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T15:56:27.482Z"
+  },
+  {
+    "id": "session_1762358304095",
+    "status": "running",
+    "startTime": "2025-11-05T15:58:24.095Z"
+  },
+  {
+    "id": "session_1762358304095",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T15:58:25.612Z"
+  },
+  {
+    "id": "session_1762358543169",
+    "status": "running",
+    "startTime": "2025-11-05T16:02:23.169Z"
+  },
+  {
+    "id": "session_1762358543169",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T16:02:24.315Z"
+  },
+  {
+    "id": "session_1762360342417",
+    "status": "running",
+    "startTime": "2025-11-05T16:32:22.418Z"
+  },
+  {
+    "id": "session_1762360342417",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T16:32:24.040Z"
+  },
+  {
+    "id": "session_1762360422709",
+    "status": "running",
+    "startTime": "2025-11-05T16:33:42.709Z"
+  },
+  {
+    "id": "session_1762360422709",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T16:33:43.959Z"
+  },
+  {
+    "id": "session_1762360534473",
+    "status": "running",
+    "startTime": "2025-11-05T16:35:34.474Z"
+  },
+  {
+    "id": "session_1762360534473",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T16:35:35.616Z"
+  },
+  {
+    "id": "session_1762360672631",
+    "status": "running",
+    "startTime": "2025-11-05T16:37:52.631Z"
+  },
+  {
+    "id": "session_1762360672631",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T16:37:54.176Z"
+  },
+  {
+    "id": "session_1762360821509",
+    "status": "running",
+    "startTime": "2025-11-05T16:40:21.509Z"
+  },
+  {
+    "id": "session_1762360821509",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T16:40:22.991Z"
+  },
+  {
+    "id": "session_1762360953794",
+    "status": "running",
+    "startTime": "2025-11-05T16:42:33.795Z"
+  },
+  {
+    "id": "session_1762360953794",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-flash-1.5' not found",
+    "endTime": "2025-11-05T16:42:36.373Z"
+  },
+  {
+    "id": "session_1762379695215",
+    "status": "running",
+    "startTime": "2025-11-05T21:54:55.218Z"
+  },
+  {
+    "id": "session_1762379695215",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-2.0-flash-exp:free' not found",
+    "endTime": "2025-11-05T21:55:00.722Z"
+  },
+  {
+    "id": "session_1762380288725",
+    "status": "running",
+    "startTime": "2025-11-05T22:04:48.725Z"
+  },
+  {
+    "id": "session_1762380288725",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-2.0-flash-exp:free' not found",
+    "endTime": "2025-11-05T22:04:50.226Z"
+  },
+  {
+    "id": "session_1762380391609",
+    "status": "running",
+    "startTime": "2025-11-05T22:06:31.609Z"
+  },
+  {
+    "id": "session_1762380391609",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-2.0-flash-exp:free' not found",
+    "endTime": "2025-11-05T22:06:32.884Z"
+  },
+  {
+    "id": "session_1762380423066",
+    "status": "running",
+    "startTime": "2025-11-05T22:07:03.066Z"
+  },
+  {
+    "id": "session_1762380423066",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-2.0-flash-exp:free' not found",
+    "endTime": "2025-11-05T22:07:07.655Z"
+  },
+  {
+    "id": "session_1762380443971",
+    "status": "running",
+    "startTime": "2025-11-05T22:07:23.972Z"
+  },
+  {
+    "id": "session_1762380443971",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-2.0-flash-exp:free' not found",
+    "endTime": "2025-11-05T22:07:25.271Z"
+  },
+  {
+    "id": "session_1762387594851",
+    "status": "running",
+    "startTime": "2025-11-06T00:06:34.852Z"
+  },
+  {
+    "id": "session_1762387594851",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-2.0-flash-exp:free' not found",
+    "endTime": "2025-11-06T00:06:36.647Z"
+  },
+  {
+    "id": "session_1762387607754",
+    "status": "running",
+    "startTime": "2025-11-06T00:06:47.754Z"
+  },
+  {
+    "id": "session_1762387607754",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-2.0-flash-exp:free' not found",
+    "endTime": "2025-11-06T00:06:48.929Z"
+  },
+  {
+    "id": "session_1762387920367",
+    "status": "running",
+    "startTime": "2025-11-06T00:12:00.367Z"
+  },
+  {
+    "id": "session_1762387920367",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'qwen/qwen3-coder:free' not found",
+    "endTime": "2025-11-06T00:12:02.072Z"
+  },
+  {
+    "id": "session_1762388009818",
+    "status": "running",
+    "startTime": "2025-11-06T00:13:29.819Z"
+  },
+  {
+    "id": "session_1762419755436",
+    "status": "running",
+    "startTime": "2025-11-06T09:02:35.441Z"
+  },
+  {
+    "id": "session_1762419755436",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-2.0-flash-exp:free' not found",
+    "endTime": "2025-11-06T09:02:40.083Z"
+  },
+  {
+    "id": "session_1762419778120",
+    "status": "running",
+    "startTime": "2025-11-06T09:02:58.120Z"
+  },
+  {
+    "id": "session_1762419778120",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-2.0-flash-exp:free' not found",
+    "endTime": "2025-11-06T09:02:59.273Z"
+  },
+  {
+    "id": "session_1762420165639",
+    "status": "failed",
+    "error": "OpenRouter API Key is not set. Please set it in the Settings.",
+    "endTime": "2025-11-06T09:09:25.640Z"
+  },
+  {
+    "id": "session_1762420180608",
+    "status": "failed",
+    "error": "OpenRouter API Key is not set. Please set it in the Settings.",
+    "endTime": "2025-11-06T09:09:40.608Z"
+  },
+  {
+    "id": "session_1762420301983",
+    "status": "failed",
+    "error": "OpenRouter API Key is not set. Please set it in the Settings.",
+    "endTime": "2025-11-06T09:11:41.984Z"
+  },
+  {
+    "id": "session_1762420325934",
+    "status": "failed",
+    "error": "OpenRouter API Key is not set. Please set it in the Settings.",
+    "endTime": "2025-11-06T09:12:05.934Z"
+  },
+  {
+    "id": "session_1762420348521",
+    "status": "running",
+    "startTime": "2025-11-06T09:12:28.523Z"
+  },
+  {
+    "id": "session_1762420348521",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'tngtech/deepseek-r1t2-chimera:free' not found",
+    "endTime": "2025-11-06T09:12:30.331Z"
+  },
+  {
+    "id": "session_1762420503989",
+    "status": "running",
+    "startTime": "2025-11-06T09:15:03.993Z"
+  },
+  {
+    "id": "session_1762420503989",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'tngtech/deepseek-r1t2-chimera:free' not found",
+    "endTime": "2025-11-06T09:15:05.520Z"
+  },
+  {
+    "id": "session_1762420589702",
+    "status": "running",
+    "startTime": "2025-11-06T09:16:29.704Z"
+  },
+  {
+    "id": "session_1762420589702",
+    "status": "failed",
+    "error": "NOT_FOUND: Model 'google/gemini-2.0-flash-exp:free' not found",
+    "endTime": "2025-11-06T09:16:31.919Z"
+  },
+  {
+    "id": "session_1762420921672",
+    "status": "running",
+    "startTime": "2025-11-06T09:22:01.676Z"
+  },
+  {
+    "id": "session_1762420921672",
+    "status": "failed",
+    "error": "Failed to communicate with OpenRouter: OpenRouter API request failed with status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemini-2.0-flash-exp:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google\"}},\"user_id\":\"user_2umpKTpoK5XaUw9u0A4KAGMn2M6\"}",
+    "endTime": "2025-11-06T09:22:08.343Z"
+  },
+  {
+    "id": "session_1762420959967",
+    "status": "running",
+    "startTime": "2025-11-06T09:22:39.968Z"
+  },
+  {
+    "id": "session_1762420959967",
+    "status": "failed",
+    "error": "Failed to communicate with OpenRouter: OpenRouter API request failed with status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Venice\"}},\"user_id\":\"user_2umpKTpoK5XaUw9u0A4KAGMn2M6\"}",
+    "endTime": "2025-11-06T09:22:46.613Z"
+  },
+  {
+    "id": "session_1762421024954",
+    "status": "running",
+    "startTime": "2025-11-06T09:23:44.955Z"
+  },
+  {
+    "id": "session_1762421024954",
+    "status": "completed",
+    "endTime": "2025-11-06T09:24:18.477Z"
+  },
+  {
+    "id": "session_1762421521694",
+    "status": "running",
+    "startTime": "2025-11-06T09:32:01.705Z"
+  },
+  {
+    "id": "session_1762421521694",
+    "status": "failed",
+    "error": "Failed to communicate with OpenRouter: OpenRouter API request failed with status 404: {\"error\":{\"message\":\"No endpoints found matching your data policy (Free model publication). Configure: https://openrouter.ai/settings/privacy\",\"code\":404}}",
+    "endTime": "2025-11-06T09:32:05.281Z"
+  },
+  {
+    "id": "session_1762421541854",
+    "status": "running",
+    "startTime": "2025-11-06T09:32:21.854Z"
+  },
+  {
+    "id": "session_1762421541854",
+    "status": "completed",
+    "endTime": "2025-11-06T09:32:29.359Z"
+  },
+  {
+    "id": "session_1762430819411",
+    "status": "running",
+    "startTime": "2025-11-06T12:06:59.412Z"
+  },
+  {
+    "id": "session_1762430819411",
+    "status": "failed",
+    "error": "Failed to communicate with OpenRouter: OpenRouter API request failed with status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"microsoft/mai-ds-r1:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Chutes\"}},\"user_id\":\"user_2umpKTpoK5XaUw9u0A4KAGMn2M6\"}",
+    "endTime": "2025-11-06T12:07:02.015Z"
+  },
+  {
+    "id": "session_1762430827403",
+    "status": "running",
+    "startTime": "2025-11-06T12:07:07.403Z"
+  },
+  {
+    "id": "session_1762430827403",
+    "status": "failed",
+    "error": "Failed to communicate with OpenRouter: OpenRouter API request failed with status 400: {\"error\":{\"message\":\"Provider returned error\",\"code\":400,\"metadata\":{\"raw\":\"{\\\"details\\\":{\\\"_errors\\\":[\\\"response_format is not supported by this model\\\"]},\\\"issues\\\":[{\\\"code\\\":\\\"custom\\\",\\\"message\\\":\\\"response_format is not supported by this model\\\",\\\"path\\\":[]}]}\",\"provider_name\":\"Venice\"}},\"user_id\":\"user_2umpKTpoK5XaUw9u0A4KAGMn2M6\"}",
+    "endTime": "2025-11-06T12:07:11.172Z"
+  },
+  {
+    "id": "session_1762430843900",
+    "status": "running",
+    "startTime": "2025-11-06T12:07:23.900Z"
+  },
+  {
+    "id": "session_1762430843900",
+    "status": "failed",
+    "error": "Failed to communicate with OpenRouter: OpenRouter API request failed with status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"deepseek/deepseek-r1:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Chutes\"}},\"user_id\":\"user_2umpKTpoK5XaUw9u0A4KAGMn2M6\"}",
+    "endTime": "2025-11-06T12:08:01.393Z"
+  },
+  {
+    "id": "session_1762453401953",
+    "status": "running",
+    "startTime": "2025-11-06T18:23:21.953Z"
+  },
+  {
+    "id": "session_1762453401953",
+    "status": "failed",
+    "error": "Failed to communicate with OpenRouter: OpenRouter API request failed with status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemini-2.0-flash-exp:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google\"}},\"user_id\":\"user_2umpKTpoK5XaUw9u0A4KAGMn2M6\"}",
+    "endTime": "2025-11-06T18:23:26.112Z"
+  },
+  {
+    "id": "session_1762453416433",
+    "status": "running",
+    "startTime": "2025-11-06T18:23:36.433Z"
+  },
+  {
+    "id": "session_1762453416433",
+    "status": "failed",
+    "error": "Failed to communicate with OpenRouter: OpenRouter API request failed with status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"deepseek/deepseek-r1-0528:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Chutes\"}},\"user_id\":\"user_2umpKTpoK5XaUw9u0A4KAGMn2M6\"}",
+    "endTime": "2025-11-06T18:23:38.566Z"
+  },
+  {
+    "id": "session_1762453427770",
+    "status": "running",
+    "startTime": "2025-11-06T18:23:47.770Z"
+  },
+  {
+    "id": "session_1762453427770",
+    "status": "completed",
+    "endTime": "2025-11-06T18:23:54.153Z"
+  },
+  {
+    "id": "session_1762453587736",
+    "status": "running",
+    "startTime": "2025-11-06T18:26:27.736Z"
+  },
+  {
+    "id": "session_1762453587736",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-06T18:27:28.044Z"
+  },
+  {
+    "id": "session_1762453677852",
+    "status": "running",
+    "startTime": "2025-11-06T18:27:57.852Z"
+  },
+  {
+    "id": "session_1762453677852",
+    "status": "failed",
+    "error": "Failed to fetch",
+    "endTime": "2025-11-06T18:28:12.187Z"
+  },
+  {
+    "id": "session_1762453711022",
+    "status": "running",
+    "startTime": "2025-11-06T18:28:31.022Z"
+  },
+  {
+    "id": "session_1762453711022",
+    "status": "completed",
+    "endTime": "2025-11-06T18:28:40.207Z"
+  },
+  {
+    "id": "session_1762453743790",
+    "status": "running",
+    "startTime": "2025-11-06T18:29:03.790Z"
+  },
+  {
+    "id": "session_1762453743790",
+    "status": "completed",
+    "endTime": "2025-11-06T18:30:01.620Z"
+  },
+  {
+    "id": "session_1762453846083",
+    "status": "running",
+    "startTime": "2025-11-06T18:30:46.083Z"
+  },
+  {
+    "id": "session_1762453846083",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-06T18:32:08.579Z"
+  },
+  {
+    "id": "session_1762458241043",
+    "status": "running",
+    "startTime": "2025-11-06T19:44:01.043Z"
+  },
+  {
+    "id": "session_1762458241043",
+    "status": "completed",
+    "endTime": "2025-11-06T19:44:22.653Z"
+  },
+  {
+    "id": "session_1762459251420",
+    "status": "running",
+    "startTime": "2025-11-06T20:00:51.420Z"
+  },
+  {
+    "id": "session_1762459251420",
+    "status": "completed",
+    "endTime": "2025-11-06T20:00:57.970Z"
+  },
+  {
+    "id": "session_1762474695121",
+    "status": "running",
+    "startTime": "2025-11-07T00:18:15.122Z"
+  },
+  {
+    "id": "session_1762474695121",
+    "status": "completed",
+    "endTime": "2025-11-07T00:18:22.150Z"
+  },
+  {
+    "id": "session_1762475455680",
+    "status": "running",
+    "startTime": "2025-11-07T00:30:55.681Z"
+  },
+  {
+    "id": "session_1762475455680",
+    "status": "completed",
+    "endTime": "2025-11-07T00:31:03.413Z"
+  },
+  {
+    "id": "session_1762482404394",
+    "status": "running",
+    "startTime": "2025-11-07T02:26:44.394Z"
+  },
+  {
+    "id": "session_1762482404394",
+    "status": "failed",
+    "error": "Agent with ID \"web-research-agent\" not found for step \"Formulate Search Queries\".",
+    "endTime": "2025-11-07T02:26:44.573Z"
+  },
+  {
+    "id": "session_1762482478493",
+    "status": "running",
+    "startTime": "2025-11-07T02:27:58.493Z"
+  },
+  {
+    "id": "session_1762482478493",
+    "status": "failed",
+    "error": "prop.isOptional is not a function",
+    "endTime": "2025-11-07T02:27:58.644Z"
+  },
+  {
+    "id": "session_1762491220536",
+    "status": "running",
+    "startTime": "2025-11-07T04:53:40.536Z"
+  },
+  {
+    "id": "session_1762491220536",
+    "status": "failed",
+    "error": "Failed to parse URL from /api/data",
+    "endTime": "2025-11-07T04:54:09.787Z"
+  },
+  {
+    "id": "session_1762491305403",
+    "status": "running",
+    "startTime": "2025-11-07T04:55:05.403Z"
+  },
+  {
+    "id": "session_1762491305403",
+    "status": "completed",
+    "endTime": "2025-11-07T04:55:27.381Z"
+  },
+  {
+    "id": "session_1762491347205",
+    "status": "running",
+    "startTime": "2025-11-07T04:55:47.205Z"
+  },
+  {
+    "id": "session_1762491347205",
+    "status": "failed",
+    "error": "Failed to fetch",
+    "endTime": "2025-11-07T04:56:18.281Z"
+  },
+  {
+    "id": "session_1762491428400",
+    "status": "running",
+    "startTime": "2025-11-07T04:57:08.400Z"
+  },
+  {
+    "id": "session_1762491436000",
+    "status": "running",
+    "startTime": "2025-11-07T04:57:16.000Z"
+  },
+  {
+    "id": "session_1762491436000",
+    "status": "failed",
+    "error": "Failed to fetch",
+    "endTime": "2025-11-07T04:57:26.399Z"
+  },
+  {
+    "id": "session_1762491428400",
+    "status": "failed",
+    "error": "Failed to fetch",
+    "endTime": "2025-11-07T04:57:34.194Z"
+  },
+  {
+    "id": "session_1762491461433",
+    "status": "running",
+    "startTime": "2025-11-07T04:57:41.433Z"
+  },
+  {
+    "id": "session_1762491461433",
+    "status": "completed",
+    "endTime": "2025-11-07T04:57:57.676Z"
+  },
+  {
+    "id": "session_1762491558005",
+    "status": "running",
+    "startTime": "2025-11-07T04:59:18.005Z"
+  },
+  {
+    "id": "session_1762491558005",
+    "status": "completed",
+    "endTime": "2025-11-07T04:59:54.184Z"
+  },
+  {
+    "id": "session_1762492104827",
+    "status": "running",
+    "startTime": "2025-11-07T05:08:24.828Z"
+  },
+  {
+    "id": "session_1762492104827",
+    "status": "failed",
+    "error": "All available models failed to provide a valid response.",
+    "endTime": "2025-11-07T05:08:48.296Z"
+  },
+  {
+    "id": "session_1762492265363",
+    "status": "running",
+    "startTime": "2025-11-07T05:11:05.363Z"
+  },
+  {
+    "id": "session_1762492265363",
+    "status": "completed",
+    "endTime": "2025-11-07T05:11:38.447Z"
+  },
+  {
+    "id": "session_1762492590791",
+    "status": "running",
+    "startTime": "2025-11-07T05:16:30.791Z"
+  },
+  {
+    "id": "session_1762492590791",
+    "status": "failed",
+    "error": "All available models failed to provide a valid response.",
+    "endTime": "2025-11-07T05:17:02.824Z"
+  },
+  {
+    "id": "session_1762492695059",
+    "status": "running",
+    "startTime": "2025-11-07T05:18:15.059Z"
+  },
+  {
+    "id": "session_1762492695059",
+    "status": "failed",
+    "error": "All available models failed to provide a valid response.",
+    "endTime": "2025-11-07T05:18:35.547Z"
+  },
+  {
+    "id": "session_1762492736141",
+    "status": "running",
+    "startTime": "2025-11-07T05:18:56.141Z"
+  },
+  {
+    "id": "session_1762492736141",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:18:56.346Z"
+  },
+  {
+    "id": "session_1762492911244",
+    "status": "running",
+    "startTime": "2025-11-07T05:21:51.244Z"
+  },
+  {
+    "id": "session_1762492911244",
+    "status": "failed",
+    "error": "shape[key].isOptional is not a function",
+    "endTime": "2025-11-07T05:21:51.438Z"
+  },
+  {
+    "id": "session_1762493166454",
+    "status": "running",
+    "startTime": "2025-11-07T05:26:06.455Z"
+  },
+  {
+    "id": "session_1762493166454",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:26:06.644Z"
+  },
+  {
+    "id": "session_1762493247905",
+    "status": "running",
+    "startTime": "2025-11-07T05:27:27.906Z"
+  },
+  {
+    "id": "session_1762493247905",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:27:28.083Z"
+  },
+  {
+    "id": "session_1762493253986",
+    "status": "running",
+    "startTime": "2025-11-07T05:27:33.986Z"
+  },
+  {
+    "id": "session_1762493253986",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:27:34.313Z"
+  },
+  {
+    "id": "session_1762493528264",
+    "status": "running",
+    "startTime": "2025-11-07T05:32:08.265Z"
+  },
+  {
+    "id": "session_1762493528264",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:32:12.367Z"
+  },
+  {
+    "id": "session_1762493686403",
+    "status": "running",
+    "startTime": "2025-11-07T05:34:46.404Z"
+  },
+  {
+    "id": "session_1762493686403",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:34:48.435Z"
+  },
+  {
+    "id": "session_1762493775552",
+    "status": "running",
+    "startTime": "2025-11-07T05:36:15.552Z"
+  },
+  {
+    "id": "session_1762493775552",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:36:17.987Z"
+  },
+  {
+    "id": "session_1762493832825",
+    "status": "running",
+    "startTime": "2025-11-07T05:37:12.825Z"
+  },
+  {
+    "id": "session_1762493832825",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:37:14.255Z"
+  },
+  {
+    "id": "session_1762493847802",
+    "status": "running",
+    "startTime": "2025-11-07T05:37:27.802Z"
+  },
+  {
+    "id": "session_1762493847802",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:37:29.180Z"
+  },
+  {
+    "id": "session_1762493869931",
+    "status": "running",
+    "startTime": "2025-11-07T05:37:49.931Z"
+  },
+  {
+    "id": "session_1762493869931",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:37:51.626Z"
+  },
+  {
+    "id": "session_1762493876755",
+    "status": "running",
+    "startTime": "2025-11-07T05:37:56.755Z"
+  },
+  {
+    "id": "session_1762493876755",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:37:58.892Z"
+  },
+  {
+    "id": "session_1762493885507",
+    "status": "running",
+    "startTime": "2025-11-07T05:38:05.508Z"
+  },
+  {
+    "id": "session_1762493885507",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:38:08.723Z"
+  },
+  {
+    "id": "session_1762493897590",
+    "status": "running",
+    "startTime": "2025-11-07T05:38:17.591Z"
+  },
+  {
+    "id": "session_1762493897590",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:38:21.046Z"
+  },
+  {
+    "id": "session_1762494092628",
+    "status": "running",
+    "startTime": "2025-11-07T05:41:32.628Z"
+  },
+  {
+    "id": "session_1762494092628",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:41:36.093Z"
+  },
+  {
+    "id": "session_1762494373623",
+    "status": "running",
+    "startTime": "2025-11-07T05:46:13.624Z"
+  },
+  {
+    "id": "session_1762494373623",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T05:46:16.663Z"
+  },
+  {
+    "id": "session_1762494591225",
+    "status": "running",
+    "startTime": "2025-11-07T05:49:51.226Z"
+  },
+  {
+    "id": "session_1762494591225",
+    "status": "completed",
+    "endTime": "2025-11-07T05:50:09.838Z"
+  },
+  {
+    "id": "session_1762494632794",
+    "status": "running",
+    "startTime": "2025-11-07T05:50:32.794Z"
+  },
+  {
+    "id": "session_1762494632794",
+    "status": "completed",
+    "endTime": "2025-11-07T05:50:51.346Z"
+  },
+  {
+    "id": "session_1762496018953",
+    "status": "running",
+    "startTime": "2025-11-07T06:13:38.953Z"
+  },
+  {
+    "id": "session_1762496018953",
+    "status": "completed",
+    "endTime": "2025-11-07T06:14:16.803Z"
+  },
+  {
+    "id": "session_1762497949063",
+    "status": "running",
+    "startTime": "2025-11-07T06:45:49.063Z"
+  },
+  {
+    "id": "session_1762497949063",
+    "status": "completed",
+    "endTime": "2025-11-07T06:46:08.477Z"
+  },
+  {
+    "id": "session_1762547289841",
+    "status": "running",
+    "startTime": "2025-11-07T20:28:09.842Z"
+  },
+  {
+    "id": "session_1762547289841",
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'ZodObject')",
+    "endTime": "2025-11-07T20:28:19.245Z"
+  },
+  {
+    "id": "session_1762547425294",
+    "status": "running",
+    "startTime": "2025-11-07T20:30:25.295Z"
+  },
+  {
+    "id": "session_1762547425294",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-07T20:31:28.744Z"
+  },
+  {
+    "id": "session_1762547583461",
+    "status": "running",
+    "startTime": "2025-11-07T20:33:03.462Z"
+  },
+  {
+    "id": "session_1762547583461",
+    "status": "completed",
+    "endTime": "2025-11-07T20:33:57.676Z"
+  },
+  {
+    "id": "session_1762550449240",
+    "status": "running",
+    "startTime": "2025-11-07T21:20:49.241Z"
+  },
+  {
+    "id": "session_1762550449240",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-07T21:21:49.681Z"
+  },
+  {
+    "id": "session_1762550592398",
+    "status": "running",
+    "startTime": "2025-11-07T21:23:12.398Z"
+  },
+  {
+    "id": "session_1762550592398",
+    "status": "failed",
+    "error": "Agent with ID \"market-scanner-agent\" not found for step \"Scan For Opportunity\".",
+    "endTime": "2025-11-07T21:23:12.554Z"
+  },
+  {
+    "id": "session_1762550645944",
+    "status": "running",
+    "startTime": "2025-11-07T21:24:05.944Z"
+  },
+  {
+    "id": "session_1762550645944",
+    "status": "failed",
+    "error": "Agent with ID \"market-scanner-agent\" not found for step \"Scan For Opportunity\".",
+    "endTime": "2025-11-07T21:24:06.116Z"
+  },
+  {
+    "id": "session_1762550676036",
+    "status": "running",
+    "startTime": "2025-11-07T21:24:36.037Z"
+  },
+  {
+    "id": "session_1762550676036",
+    "status": "failed",
+    "error": "Failed to fetch",
+    "endTime": "2025-11-07T21:25:23.420Z"
+  },
+  {
+    "id": "session_1762550734451",
+    "status": "running",
+    "startTime": "2025-11-07T21:25:34.452Z"
+  },
+  {
+    "id": "session_1762550734451",
+    "status": "failed",
+    "error": "Agent with ID \"market-scanner-agent\" not found for step \"Scan For Opportunity\".",
+    "endTime": "2025-11-07T21:25:34.772Z"
+  },
+  {
+    "id": "session_1762550754644",
+    "status": "running",
+    "startTime": "2025-11-07T21:25:54.644Z"
+  },
+  {
+    "id": "session_1762550754644",
+    "status": "failed",
+    "error": "Agent with ID \"market-scanner-agent\" not found for step \"Scan For Opportunity\".",
+    "endTime": "2025-11-07T21:25:54.949Z"
+  },
+  {
+    "id": "session_1762550810459",
+    "status": "running",
+    "startTime": "2025-11-07T21:26:50.460Z"
+  },
+  {
+    "id": "session_1762550810459",
+    "status": "failed",
+    "error": "Failed to fetch",
+    "endTime": "2025-11-07T21:27:11.892Z"
+  },
+  {
+    "id": "session_1762606926801",
+    "status": "failed",
+    "error": "OpenRouter API Key is not set. Please set it in the Settings.",
+    "endTime": "2025-11-08T13:02:06.836Z"
+  },
+  {
+    "id": "session_1762606949209",
+    "status": "failed",
+    "error": "OpenRouter API Key is not set. Please set it in the Settings.",
+    "endTime": "2025-11-08T13:02:29.209Z"
+  },
+  {
+    "id": "session_1762606958865",
+    "status": "running",
+    "startTime": "2025-11-08T13:02:38.865Z"
+  },
+  {
+    "id": "session_1762606958865",
+    "status": "completed",
+    "endTime": "2025-11-08T13:03:16.299Z"
+  },
+  {
+    "id": "session_1762623177284",
+    "status": "running",
+    "startTime": "2025-11-08T17:32:57.284Z"
+  },
+  {
+    "id": "session_1762623177284",
+    "status": "failed",
+    "error": "Failed to get candles: Parameter bar error.",
+    "endTime": "2025-11-08T17:33:11.303Z"
+  },
+  {
+    "id": "session_1762623273848",
+    "status": "running",
+    "startTime": "2025-11-08T17:34:33.850Z"
+  },
+  {
+    "id": "session_1762623273848",
+    "status": "failed",
+    "error": "Failed to get candles: Parameter instId error.",
+    "endTime": "2025-11-08T17:35:24.773Z"
+  },
+  {
+    "id": "session_1762623933742",
+    "status": "running",
+    "startTime": "2025-11-08T17:45:33.743Z"
+  },
+  {
+    "id": "session_1762623933742",
+    "status": "failed",
+    "error": "Failed to get candles: Parameter bar error.",
+    "endTime": "2025-11-08T17:45:49.586Z"
+  },
+  {
+    "id": "session_1762626461792",
+    "status": "running",
+    "startTime": "2025-11-08T18:27:41.792Z"
+  },
+  {
+    "id": "session_1762626461792",
+    "status": "failed",
+    "error": "Agent with ID \"market-scanner-agent\" not found for step \"Scan For Opportunity\".",
+    "endTime": "2025-11-08T18:27:42.097Z"
+  },
+  {
+    "id": "session_1762626619302",
+    "status": "running",
+    "startTime": "2025-11-08T18:30:19.302Z"
+  },
+  {
+    "id": "session_1762626619302",
+    "status": "failed",
+    "error": "Agent with ID \"market-scanner-agent\" not found for step \"Scan For Opportunity\".",
+    "endTime": "2025-11-08T18:30:19.572Z"
+  },
+  {
+    "id": "session_1762626699761",
+    "status": "running",
+    "startTime": "2025-11-08T18:31:39.761Z"
+  },
+  {
+    "id": "session_1762626699761",
+    "status": "failed",
+    "error": "agents.find is not a function",
+    "endTime": "2025-11-08T18:31:43.226Z"
+  },
+  {
+    "id": "session_1762626760108",
+    "status": "running",
+    "startTime": "2025-11-08T18:32:40.108Z"
+  },
+  {
+    "id": "session_1762626760108",
+    "status": "failed",
+    "error": "agents.find is not a function",
+    "endTime": "2025-11-08T18:32:43.223Z"
+  },
+  {
+    "id": "session_1762627160131",
+    "status": "running",
+    "startTime": "2025-11-08T18:39:20.132Z"
+  },
+  {
+    "id": "session_1762627160131",
+    "status": "completed",
+    "endTime": "2025-11-08T18:40:02.098Z"
+  },
+  {
+    "id": "session_1762633041185",
+    "status": "running",
+    "startTime": "2025-11-08T20:17:21.187Z"
+  },
+  {
+    "id": "session_1762660328273",
+    "status": "running",
+    "startTime": "2025-11-09T03:52:08.275Z"
+  },
+  {
+    "id": "session_1762660328273",
+    "status": "completed",
+    "endTime": "2025-11-09T03:52:33.258Z"
+  },
+  {
+    "id": "session_1762666506794",
+    "status": "running",
+    "startTime": "2025-11-09T05:35:06.795Z"
+  },
+  {
+    "id": "session_1762666506794",
+    "status": "completed",
+    "endTime": "2025-11-09T05:35:50.122Z"
+  },
+  {
+    "id": "session_1762668077453",
+    "status": "running",
+    "startTime": "2025-11-09T06:01:17.454Z"
+  },
+  {
+    "id": "session_1762668077453",
+    "status": "completed",
+    "endTime": "2025-11-09T06:01:52.637Z"
+  },
+  {
+    "id": "session_1762668145797",
+    "status": "running",
+    "startTime": "2025-11-09T06:02:25.797Z"
+  },
+  {
+    "id": "session_1762668145797",
+    "status": "completed",
+    "endTime": "2025-11-09T06:03:14.416Z"
+  },
+  {
+    "id": "session_1762668488058",
+    "status": "running",
+    "startTime": "2025-11-09T06:08:08.058Z"
+  },
+  {
+    "id": "session_1762668488058",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-09T06:09:27.050Z"
+  },
+  {
+    "id": "session_1762697820824",
+    "status": "running",
+    "startTime": "2025-11-09T14:17:00.831Z"
+  },
+  {
+    "id": "session_1762697820824",
+    "status": "completed",
+    "endTime": "2025-11-09T14:17:34.811Z"
+  },
+  {
+    "id": "session_1762697891579",
+    "status": "running",
+    "startTime": "2025-11-09T14:18:11.579Z"
+  },
+  {
+    "id": "session_1762697891579",
+    "status": "completed",
+    "endTime": "2025-11-09T14:18:37.633Z"
+  },
+  {
+    "id": "session_1762698275267",
+    "status": "running",
+    "startTime": "2025-11-09T14:24:35.267Z"
+  },
+  {
+    "id": "session_1762698275267",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-09T14:25:41.346Z"
+  },
+  {
+    "id": "session_1762701609290",
+    "status": "running",
+    "startTime": "2025-11-09T15:20:09.290Z"
+  },
+  {
+    "id": "session_1762701609290",
+    "status": "completed",
+    "endTime": "2025-11-09T15:20:40.433Z"
+  },
+  {
+    "id": "session_1762702026977",
+    "status": "running",
+    "startTime": "2025-11-09T15:27:06.978Z"
+  },
+  {
+    "id": "session_1762702026977",
+    "status": "completed",
+    "endTime": "2025-11-09T15:27:31.252Z"
+  },
+  {
+    "id": "session_1762703798305",
+    "status": "running",
+    "startTime": "2025-11-09T15:56:38.305Z"
+  },
+  {
+    "id": "session_1762708997019",
+    "status": "running",
+    "startTime": "2025-11-09T17:23:17.023Z"
+  },
+  {
+    "id": "session_1762708997019",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-09T17:24:23.144Z"
+  },
+  {
+    "id": "session_1762709486383",
+    "status": "running",
+    "startTime": "2025-11-09T17:31:26.384Z"
+  },
+  {
+    "id": "session_1762709486383",
+    "status": "failed",
+    "error": "Agent with ID \"agent_1762421550003\" not found for step \"Research Market Sentiment and news for {instrument}\".",
+    "endTime": "2025-11-09T17:31:55.305Z"
+  },
+  {
+    "id": "session_1762709715446",
+    "status": "running",
+    "startTime": "2025-11-09T17:35:15.446Z"
+  },
+  {
+    "id": "session_1762709715446",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-09T17:36:44.030Z"
+  },
+  {
+    "id": "session_1762709954072",
+    "status": "running",
+    "startTime": "2025-11-09T17:39:14.072Z"
+  },
+  {
+    "id": "session_1762709954072",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-09T17:40:46.733Z"
+  },
+  {
+    "id": "session_1762710660797",
+    "status": "running",
+    "startTime": "2025-11-09T17:51:00.798Z"
+  },
+  {
+    "id": "session_1762710660797",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-09T17:52:32.415Z"
+  },
+  {
+    "id": "session_1762711159672",
+    "status": "running",
+    "startTime": "2025-11-09T17:59:19.673Z"
+  },
+  {
+    "id": "session_1762711159672",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-09T18:00:57.836Z"
+  },
+  {
+    "id": "session_1762711319199",
+    "status": "running",
+    "startTime": "2025-11-09T18:01:59.199Z"
+  },
+  {
+    "id": "session_1762711472021",
+    "status": "running",
+    "startTime": "2025-11-09T18:04:32.022Z"
+  },
+  {
+    "id": "session_1762711472021",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-09T18:06:20.609Z"
+  },
+  {
+    "id": "session_1762712574594",
+    "status": "running",
+    "startTime": "2025-11-09T18:22:54.596Z"
+  },
+  {
+    "id": "session_1762717762132",
+    "status": "running",
+    "startTime": "2025-11-09T19:49:22.133Z"
+  },
+  {
+    "id": "session_1762717762132",
+    "status": "failed",
+    "error": "An unexpected response was received from the server.",
+    "endTime": "2025-11-09T19:51:02.997Z"
+  },
+  {
+    "id": "session_1762741628371",
+    "status": "running",
+    "startTime": "2025-11-10T02:27:08.374Z"
+  },
+  {
+    "id": "session_1762741628371",
+    "status": "completed",
+    "endTime": "2025-11-10T02:28:28.058Z"
+  },
+  {
+    "id": "session_1762743971785",
+    "status": "running",
+    "startTime": "2025-11-10T03:06:11.787Z"
+  },
+  {
+    "id": "session_1762743971785",
+    "status": "failed",
+    "error": "Failed to fetch",
+    "endTime": "2025-11-10T03:07:13.807Z"
+  }
+]
