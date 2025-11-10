@@ -1,0 +1,34 @@
+[
+  {
+    "id": "alert_1762708676132_APR-USDT",
+    "instrument": "APR-USDT",
+    "timeframe": "3m",
+    "threshold": 5,
+    "actualChange": -13.480259034886155,
+    "timestamp": "2025-11-09T17:17:56.132Z"
+  },
+  {
+    "id": "alert_1762708676132_RPL-USDT",
+    "instrument": "RPL-USDT",
+    "timeframe": "3m",
+    "threshold": 5,
+    "actualChange": 5.332584900364859,
+    "timestamp": "2025-11-09T17:17:56.132Z"
+  },
+  {
+    "id": "alert_1762709415546_APR-USDT",
+    "instrument": "APR-USDT",
+    "timeframe": "1H",
+    "threshold": 20,
+    "actualChange": 22.90518914948318,
+    "timestamp": "2025-11-09T17:30:15.546Z"
+  },
+  {
+    "id": "alert_1762746807575_AIA-USDT",
+    "instrument": "AIA-USDT",
+    "timeframe": "3m",
+    "threshold": 5,
+    "actualChange": -5.924509349405041,
+    "timestamp": "2025-11-10T03:53:27.575Z"
+  }
+]]
