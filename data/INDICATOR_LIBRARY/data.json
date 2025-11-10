@@ -1,0 +1,82 @@
+
+[
+  {
+    "id": "cvd",
+    "name": "Cumulative Volume Delta",
+    "description": "Shows the cumulative difference between buying and selling volume, indicating buying or selling pressure.",
+    "type": "Volume"
+  },
+  {
+    "id": "mfi",
+    "name": "Money Flow Index",
+    "description": "A momentum indicator that uses both price and volume to identify overbought or oversold conditions.",
+    "type": "Momentum"
+  },
+  {
+    "id": "open_interest",
+    "name": "Open Interest",
+    "description": "The total number of outstanding derivative contracts. Rising open interest indicates new money entering the market.",
+    "type": "Market State"
+  },
+  {
+    "id": "funding_rate",
+    "name": "Funding Rate",
+    "description": "Periodic payments exchanged between traders to keep perpetual contract prices close to the spot price.",
+    "type": "Market State"
+  },
+  {
+    "id": "tsi",
+    "name": "True Strength Index",
+    "description": "A momentum oscillator based on a double smoothing of price changes, used to identify trend direction and overbought/oversold conditions.",
+    "type": "Momentum"
+  },
+  {
+    "id": "adx",
+    "name": "Trend Strength Index (ADX)",
+    "description": "The Average Directional Index measures the strength of a trend, regardless of its direction.",
+    "type": "Trend"
+  },
+  {
+    "id": "choppiness_index",
+    "name": "Choppiness Index",
+    "description": "An indicator designed to determine if the market is trending or ranging (choppy).",
+    "type": "Market State"
+  },
+  {
+    "id": "bollinger_bands",
+    "name": "Bollinger Bands",
+    "description": "A volatility indicator consisting of a middle band (SMA) and two outer bands based on standard deviations.",
+    "type": "Volatility"
+  },
+  {
+    "id": "rsi",
+    "name": "Relative Strength Index (RSI)",
+    "description": "A momentum oscillator that measures the speed and change of price movements to identify overbought or oversold conditions.",
+    "type": "Momentum"
+  },
+  {
+    "id": "macd",
+    "name": "Moving Average Convergence Divergence (MACD)",
+    "description": "A trend-following momentum indicator that shows the relationship between two exponential moving averages of a security’s price.",
+    "type": "Trend"
+  },
+  {
+    "id": "stoch_osc",
+    "name": "Stochastic Oscillator",
+    "description": "A momentum indicator comparing a particular closing price of a security to a range of its prices over a certain period of time.",
+    "type": "Momentum"
+  },
+  {
+    "id": "price_velocity",
+    "name": "Price Velocity (% Change)",
+    "description": "Measures the rate of price change over a specific interval. For live data, it's the percentage change from the candle's open to close. For historical candles, it's the percentage change from the candle's open to close.",
+    "type": "Momentum"
+  },
+  {
+    "id": "velocity_score",
+    "name": "Accumulated Velocity Score",
+    "description": "A composite score representing the sum of absolute velocity percentages across multiple timeframes (1m, 3m, 5m, 15m, 30m, 1h, 4h, 24h). Used to identify instruments with high momentum across different resolutions.",
+    "type": "Momentum"
+  }
+]
+
