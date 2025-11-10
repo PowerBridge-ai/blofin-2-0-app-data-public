@@ -1,0 +1,29 @@
+[
+  {},
+  {
+    "strategyId": "strat_1762606965688",
+    "optimizationId": "opt_1762606994306",
+    "optimizedStrategy": {
+      "instrument": "BTC-USDT",
+      "timeframes": [
+        "6h",
+        "2d"
+      ],
+      "indicators": [
+        "EMA 9/21 crossover (faster signals for crypto volatility)",
+        "RSI (14) with tightening bands at 30/70 for earlier reversals",
+        "Volume MA (20) + CMF (20) zero-line cross filter",
+        "MACD (5,34,5) aggressive histogram configuration",
+        "Supertrend (2,8) with adjusted multiplier for sensitivity",
+        "ADX (25) filter (>20 strength with +DI/-DI crossover)"
+      ],
+      "dcaConfig": {
+        "initialInvestment": 1000,
+        "orderAmount": 25,
+        "maxOrders": 40
+      }
+    },
+    "optimizationAttempts": 5,
+    "status": "FAILED"
+  }
+]
