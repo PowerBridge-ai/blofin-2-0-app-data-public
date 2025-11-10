@@ -1,34 +1,34 @@
 [
   {
-    "id": "alert_1762708676132_APR-USDT",
-    "instrument": "APR-USDT",
-    "timeframe": "3m",
-    "threshold": 5,
-    "actualChange": -13.480259034886155,
-    "timestamp": "2025-11-09T17:17:56.132Z"
-  },
-  {
-    "id": "alert_1762708676132_RPL-USDT",
-    "instrument": "RPL-USDT",
-    "timeframe": "3m",
-    "threshold": 5,
-    "actualChange": 5.332584900364859,
-    "timestamp": "2025-11-09T17:17:56.132Z"
-  },
-  {
-    "id": "alert_1762709415546_APR-USDT",
-    "instrument": "APR-USDT",
-    "timeframe": "1H",
+    "id": "alert_1762777174179_JCT-USDT",
+    "instrument": "JCT-USDT",
+    "timeframe": "15m",
     "threshold": 20,
-    "actualChange": 22.90518914948318,
-    "timestamp": "2025-11-09T17:30:15.546Z"
+    "actualChange": 23.287245611309622,
+    "timestamp": "2025-11-10T12:19:34.179Z"
   },
   {
-    "id": "alert_1762746807575_AIA-USDT",
-    "instrument": "AIA-USDT",
-    "timeframe": "3m",
+    "id": "alert_1762778652182_JCT-USDT",
+    "instrument": "JCT-USDT",
+    "timeframe": "1m",
+    "threshold": 3,
+    "actualChange": 14.49951104883451,
+    "timestamp": "2025-11-10T12:44:12.182Z"
+  },
+  {
+    "id": "alert_1762778652186_JCT-USDT",
+    "instrument": "JCT-USDT",
+    "timeframe": "1m",
+    "threshold": 10,
+    "actualChange": 14.49951104883451,
+    "timestamp": "2025-11-10T12:44:12.186Z"
+  },
+  {
+    "id": "alert_1762778652185_JCT-USDT",
+    "instrument": "JCT-USDT",
+    "timeframe": "1m",
     "threshold": 5,
-    "actualChange": -5.924509349405041,
-    "timestamp": "2025-11-10T03:53:27.575Z"
+    "actualChange": 14.49951104883451,
+    "timestamp": "2025-11-10T12:44:12.185Z"
   }
-]]
+]
